@@ -24,7 +24,7 @@ contract Voting {
         uint256 indexed proposalId,
         address indexed governance,
         string title,
-        string proposal,
+        string proposalIpfsHash,
         uint256 startTime,
         uint256 amountOfVotes,
         SITUATION situation
