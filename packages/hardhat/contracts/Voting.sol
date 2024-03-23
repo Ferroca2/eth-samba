@@ -4,8 +4,8 @@ pragma solidity ^0.8.19;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract Voting {
-    uint256 private currentProtocol;
-    uint256 private currentProposal;
+    uint256 public currentProtocol;
+    uint256 public currentProposal;
     mapping(address => Protocol) public protocols;
     mapping(uint256 => Proposal) public proposals; // (proposalId => Proposal)
     mapping(uint256 => Vote[]) public votes; // (proposalId => Vote[])
