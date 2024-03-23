@@ -15,6 +15,11 @@ describe("Governance System", function () {
   let addr1: SignerWithAddress;
 
   before(async () => {
+    // create a random wallet with pk and pk
+    const randomWallet = ethers.Wallet.createRandom();
+    console.log(randomWallet.address);
+    console.log(randomWallet.privateKey);
+
     [owner, addr1] = await ethers.getSigners();
 
     // Deploy the ERC20 Governance Token
