@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Protocol {
+  id            Int      @id @default(autoincrement())
+  title         String
+  address       String
+  image_url     String?
+  proposals     Proposal[]
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+}
+
+model Proposal {
+  id            Int      @id @default(autoincrement())
+  protocol_id   Int
+  title         String
+  on_chain      Boolean  @default(false)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+  protocol      Protocol @relation(fields: [protocol_id], references: [id])
+  comments      Comment[]
+}
+
+model Comment {
+  id            Int      @id @default(autoincrement())
+  proposal_id   Int
+  content       String
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+  proposal      Proposal @relation(fields: [proposal_id], references: [id])
+  likes         Like[]
+}
+
+model Like {
+  id            Int      @id @default(autoincrement())
+  comment_id    Int
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+  comment       Comment @relation(fields: [comment_id], references: [id])
+}
