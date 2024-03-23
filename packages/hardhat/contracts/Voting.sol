@@ -23,6 +23,7 @@ contract Voting {
         uint256 id; // used to find the voters
         string title;
         string description;
+        uint256 start_time;
         uint256 amount_of_votes;
     }
 
@@ -36,29 +37,45 @@ contract Voting {
     }
 
     function addProtocol(
-        address governance,  
-        uint256 proposal_time
+        address _governance,  
+        uint256 _proposalTime
     ) external {
-        protocols[governance] = Protocol(current_protocol, 0, proposal_time);
+        protocols[_governance] = Protocol(current_protocol++, 0, _proposalTime);
     }
 
     function makeProposal(
-        address governance,
-        string memory title,
-        string memory description
+        address _governance,
+        string memory _title,
+        string memory _description
     ) external {
-        Protocol storage protocol = protocols[governance];
-        proposals[protocols[governance].id].push(
+        Protocol storage protocol = protocols[_governance];
+        proposals[protocols[_governance].id].push(
             Proposal(
                 protocol.proposal_amount++,
-                title,
-                description,
-                0
+                _title,
+                _description,
+                0,
+                block.timestamp
             )
         );
     }
     
-    function voteForProposal(OPTION vote) external {
+    function voteForProposal(
+        address _protocol_address, 
+        uint256 _proposal, 
+        OPTION _vote
+    ) external {
+        Protocol storage protocol = protocols[_protocol_address];
+        Proposal storage proposal = proposals[protocol.id][_proposal];
+        if(block.timestamp <= proposal.start_time + protocol.proposal_time) {
+            votes[_proposal].push(
+                Vote(
+                    msg.sender,
+                    _vote
+                )
+            );
+        }
+
         			
     }
 }
