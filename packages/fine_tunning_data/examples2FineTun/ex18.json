@@ -1,0 +1,94 @@
+{
+    "initial_propose": {
+        "protocol_description": "ContentHub is a decentralized blockchain-based platform that promotes content curation and creation. It allows users to create and share blog posts, articles and other forms of content, rewarding them with tokens based on viewer engagement and ratings.",
+        "title": "Introduction of Authorship Verification Mechanism",
+        "description": "Given the growing instances of content plagiarism on ContentHub, this proposal suggests introducing an Authorship Verification Mechanism to ensure the authenticity of the content and protect creators' copyrights. An decentralized identity verification system that matches the content with the creator before posting could possibly reduce plagiarism and boost the platform's credibility. Given its potential implications on freedom of posting and user privacy, the proposal urges thorough discussion and feedback from the community and token holders."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "An authorship verification mechanism can help protect original creators from plagiarism."
+        },
+        {
+            "id": "2",
+            "comment": "We need to ensure that the privacy of users is not compromised during this process."
+        },
+        {
+            "id": "3",
+            "comment": "As much as I understand the reason, this measure might restrict the free posting nature of the platform."
+        },
+        {
+            "id": "4",
+            "comment": "Is it possible to use a blockchain-based system to track content origin and ensure its uniqueness?"
+        },
+        {
+            "id": "5",
+            "comment": "What happens if a content creator wants to remain anonymous? How does the system handle that?"
+        },
+        {
+            "id": "6",
+            "comment": "This sounds like a good move, but how do we ensure that the verification process is not biased or controlled by a few?"
+        },
+        {
+            "id": "7",
+            "comment": "Wouldn't this make the process of posting content more complicated?"
+        },
+        {
+            "id": "8",
+            "comment": "The ideal solution should not only be about controlling but also deterring through a strong penalty system."
+        },
+        {
+            "id": "9",
+            "comment": "This proposal might discourage users from sharing their work due to concerns over their private information."
+        },
+        {
+            "id": "10",
+            "comment": "We should provide our community with the tools to report and challenge plagiarized content."
+        },
+        {
+            "id": "11",
+            "comment": "While verification is important, we should also educate users about plagiarism and its consequences."
+        },
+        {
+            "id": "12",
+            "comment": "The system will need to guarantee it won't deny the authenticity of unique but similar work."
+        },
+        {
+            "id": "13",
+            "comment": "The verification mechanism should align with the platform's decentralized nature and not confine creativity."
+        },
+        {
+            "id": "14",
+            "comment": "Can there be a system wherein repeated offenders are barred from posting or face token penalties?"
+        },
+        {
+            "id": "15",
+            "comment": "This can potentially increase the value and trust in our platform's content."
+        },
+        {
+            "id": "16",
+            "comment": "The verification process should not be time-consuming and hamper quick content sharing."
+        },
+        {
+            "id": "17",
+            "comment": "I'd support this if it doesn't discourage new or less-known authors from posting their original work."
+        },
+        {
+            "id": "18",
+            "comment": "We have to ensure that genuine authors aren't negatively impacted."
+        },
+        {
+            "id": "19",
+            "comment": "We should operate on the presumption of innocence, not guilt. This proposal seems a bit extreme."
+        },
+        {
+            "id": "20",
+            "comment": "User education and community-moderated checks may be a better solution to the problem at hand."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "ContentHub is a decentralized blockchain-based platform that promotes content curation and creation. It allows users to create and share blog posts, articles and other forms of content, rewarding them with tokens based on viewer engagement and ratings.",
+        "title": "Implementation of Community-Moderated Checks & User Education for Content Authenticity",
+        "description": "Taking into account the concerns about user privacy, freedom of posting, and potential complexity, the revised proposal recommends the implementation of community-moderated checks and user education to ensure content authenticity. Community members can report and review suspicious posts, and strong penalties for proven plagiarists will be enforced. At the same time, users will have access to resources about content authenticity and plagiarism. This approach aims to solidify trust in the platform without limiting creativity or violating user privacy. Community and token holders are encouraged to deliberate on this revised proposal."
+    }
+}

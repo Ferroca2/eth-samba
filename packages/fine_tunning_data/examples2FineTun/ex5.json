@@ -1,0 +1,90 @@
+{
+    "initial_propose": {
+        "protocol_description": "DencentNet is a decentralized social media platform where users can post content and interact directly with followers, providing a transparent and uncensored space.",
+        "title": "Implementing a Tiered Reward System to Encourage Active Participation",
+        "description": "At present, DencentNet rewards all contents equally, regardless of the engagement they receive. This proposal suggests implementing a tiered reward system that considers likes, shares, and comments. Such a system could encourage users to create more engaging content, enhancing the overall user experience. This approach needs thoughtful deliberation from the DencentNet community and token holders."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "Won't that just encourage a popularity contest, rather than promote a variety of content?"
+        },
+        {
+            "id": "2",
+            "comment": "This could lead to an improvement in the quality of the content uploaded to our platform."
+        },
+        {
+            "id": "3",
+            "comment": "This system might discourage new users from posting due to the fear of not getting enough engagement."
+        },
+        {
+            "id": "4",
+            "comment": "Wouldn't this lead to creating content for likes and shares rather than genuine content sharing?"
+        },
+        {
+            "id": "5",
+            "comment": "It could encourage inauthentic interactions just for the sake of rewards."
+        },
+        {
+            "id": "6",
+            "comment": "This might motivate users to be more actively involved in the community, which is a great thing."
+        },
+        {
+            "id": "7",
+            "comment": "Before implementing this, a clear guideline defining ‘engagement’ should be established."
+        },
+        {
+            "id": "8",
+            "comment": "Could we try a pilot phase first to fully understand its impact?"
+        },
+        {
+            "id": "9",
+            "comment": "This change could bring in an era of innovation and creativity in content by rewarding quality."
+        },
+        {
+            "id": "10",
+            "comment": "We should integrate some protections to avoid engagement manipulation and spamming."
+        },
+        {
+            "id": "11",
+            "comment": "While rewarding engagement is great, we should ensure the balance with freedom of expression."
+        },
+        {
+            "id": "12",
+            "comment": "I like where this is going, but we need concrete metrics to measure engagement fairly."
+        },
+        {
+            "id": "13",
+            "comment": "A shift to this model should be accompanied by an improvement in our content moderation efforts."
+        },
+        {
+            "id": "14",
+            "comment": "Maybe a combination of both the old and new reward systems could have a more positive impact."
+        },
+        {
+            "id": "15",
+            "comment": "While incentivizing engagement is good, we must safeguard the platform's ethos of giving everyone an equal voice."
+        },
+        {
+            "id": "16",
+            "comment": "Could we have a mechanism where every post gets a minimum reward but more engaging ones get bonus rewards?"
+        },
+        {
+            "id": "17",
+            "comment": "It would be great if the reward system could identify and reward original and unique content."
+        },
+        {
+            "id": "18",
+            "comment": "The tiered reward system sounds captivating, but it should not cut rewards for less popular creators."
+        },
+        {
+            "id": "19",
+            "comment": "We might also need resources for addressing disputes and conflicts that might arise due to this change."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "DencentNet is a decentralized social media platform where users can post content and interact directly with followers, providing transparent and uncensored space.",
+        "title": "Introducing a Hybrid Reward System to Encourage Quality Content and Active Participation",
+        "description": "Reflecting on community's feedback, this counter-proposal suggests introducing a hybrid reward system. Every post will continue to get a basic reward, acknowledging the user's effort. For contents that receive higher engagement, such as likes, shares, and comments, an additional bonus reward will be provided, fostering quality and creativity. This proposal ensures that new and less popular creators remain incentivized to share their content, while promoting high-engaging content. It also includes setting clear and concrete engagement metrics, enhanced content moderation efforts, and dispute management mechanisms for a fair implementation. The DencentNet community and token holders are urged to deliberate on this updated proposal."
+    }
+}

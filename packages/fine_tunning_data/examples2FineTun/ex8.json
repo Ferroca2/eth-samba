@@ -1,0 +1,86 @@
+{
+    "initial_propose": {
+        "protocol_description": "PolyPredict is a decentralized prediction market where participants can bet on the outcome of future events. It utilizes the power of crowd wisdom to forecast and generate probabilities.",
+        "title": "Introduction of Entry Fee for Predictors to Minimize Market Noise",
+        "description": "At present, anyone can participate in predictions on PolyPredict without any entry fee. However, this has led to a lot of noise with numerous non-serious predictions. This proposal suggests an introduction of a minimal entry fee for predictors. This can potentially help improve the quality of predictions and also generate some revenue for the platform. Feedback is needed from token holders and the community."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "Is there any guarantee that entry fees would ensure an improvement in prediction quality?"
+        },
+        {
+            "id": "2",
+            "comment": "This could potentially limit the number of predictors and reduce platform activity."
+        },
+        {
+            "id": "3",
+            "comment": "Entry fees might ward off malicious actors making arbitrary and careless predictions."
+        },
+        {
+            "id": "4",
+            "comment": "Before implementing fees, we should try other methods to filter out noise."
+        },
+        {
+            "id": "5",
+            "comment": "This may not favor new users who are just trying out the platform."
+        },
+        {
+            "id": "6",
+            "comment": "With careful pricing, this could help in generating additional revenue without driving away users."
+        },
+        {
+            "id": "7",
+            "comment": "We need to ensure the fee isn’t prohibitive to keep the platform accessible to all."
+        },
+        {
+            "id": "8",
+            "comment": "How about a reputation system instead? That could incentivize users to make accurate predictions."
+        },
+        {
+            "id": "9",
+            "comment": "Could we perhaps have a refundable entry fee? If a user's prediction is within a certain range, return the fee."
+        },
+        {
+            "id": "10",
+            "comment": "Adding a barrier to entry could make the platform less appealing to potential participants."
+        },
+        {
+            "id": "11",
+            "comment": "It's essential that any potential fee does not favor wealthier participants disproportionately."
+        },
+        {
+            "id": "12",
+            "comment": "An entry fee might decrease the volume of predictions but increase the quality, which could balance out."
+        },
+        {
+            "id": "13",
+            "comment": "We could perhaps try a small-scale rollout first to understand its effects better."
+        },
+        {
+            "id": "14",
+            "comment": "Would this change impact the decentralized nature of the platform in any way?"
+        },
+        {
+            "id": "15",
+            "comment": "Although there is potential for revenue, we must remember our platform's purpose: promoting accurate predictions."
+        },
+        {
+            "id": "16",
+            "comment": "We need a proper mechanism to ensure the fee doesn't become a tool for manipulation by wealthy actors."
+        },
+        {
+            "id": "17",
+            "comment": "This proposal seems fair if the fee is relatively minimal and doesn't obstruct platform accessibility."
+        },
+        {
+            "id": "18",
+            "comment": "Why not score predictions over time and limit participation of those who consistently perform poorly?"
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "PolyPredict is a decentralized prediction market where participants can bet on the outcome of future events. It utilizes the power of crowd wisdom to forecast and generate probabilities.",
+        "title": "Establishing a Refundable Entry Fee coupled with a Predictor Scoring System",
+        "description": "Taking into consideration community views, instead of a direct entry fee, this revised proposal suggests a refundable entry fee model. Predictors paying a minimal fee can participate, with refunds given for accurate predictions within a certain range. This maintains platform accessibility and encourages careful prediction. Moreover, a scoring system will be established to track predictor performance. Those consistently underperforming may face restrictions, promoting serious, quality predictions. The proposal aims for a credible and reliable platform without limiting participation. Community members and token holders are encouraged to evaluate this proposal."
+    }
+}

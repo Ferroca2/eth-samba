@@ -1,0 +1,82 @@
+{
+    "initial_propose": {
+        "protocol_description": "InsureDeFi is a decentralized insurance platform that provides a variety of insurance products in the DeFi space. It operates on the principle of pooled risk to provide coverage against potential smart contract failures, wallet hacks, and other risks.",
+        "title": "Introduction of Variable Premiums Depending on User's Risk Profile",
+        "description": "Presently, InsureDeFi charges a flat premium rate for all insurance products. However, it doesn’t account for the varying risk profiles of users. This proposal is to introduce variable premium rates depending on user's risk profile. The premiums would go towards improving the insurance pool and payout capacity. The community and token holders' views are sought on this proposal."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "In principle, it's fair to charge more from those with a higher risk profile, but we need a reliable way to determine that."
+        },
+        {
+            "id": "2",
+            "comment": "This may lead to increased complexity and potential dispute regarding risk assessment."
+        },
+        {
+            "id": "3",
+            "comment": "Dynamic pricing based on risk profiles can better tailor the product to individual needs."
+        },
+        {
+            "id": "4",
+            "comment": "We need to ensure that risk profiling does not lead to discrimination or exclusivity."
+        },
+        {
+            "id": "5",
+            "comment": "Could this inadvertently incentivize risky behavior to get higher payout?"
+        },
+        {
+            "id": "6",
+            "comment": "Discounts for low risk profiles could attract more users, increasing platform utility."
+        },
+        {
+            "id": "7",
+            "comment": "Remember, flat rates provide simplicity and ease of understanding which is also a big attraction for many."
+        },
+        {
+            "id": "8",
+            "comment": "Before implementing, we should share a transparent rubric for risk assessment and how premiums will be affected."
+        },
+        {
+            "id": "9",
+            "comment": "We would be better off improving our claim process than complicating our premium structure."
+        },
+        {
+            "id": "10",
+            "comment": "Why not offer different plans with variable benefits instead of changing the premium base on risk profiles?"
+        },
+        {
+            "id": "11",
+            "comment": "Doesn't this go against our ethos of making insurance accessible for all in the DeFi space?"
+        },
+        {
+            "id": "12",
+            "comment": "Implementation of this proposal requires a clear, understandable, and fair process of risk evaluation."
+        },
+        {
+            "id": "13",
+            "comment": "Before introducing this, we need strong algorithms to accurately analyze and determine risk levels."
+        },
+        {
+            "id": "14",
+            "comment": "Let's not forget that one of the strengths of our platform is its simplicity and easy accessibility."
+        },
+        {
+            "id": "15",
+            "comment": "I see the value in a tiered pricing structure. It could allow for more efficient risk management."
+        },
+        {
+            "id": "16",
+            "comment": "The introduction of variable premiums might create an unnecessary barrier for new and small players in the DeFi space."
+        },
+        {
+            "id": "17",
+            "comment": "Are we sure that the potential benefits outweigh the complications and possible user pushback that this change will entail?"
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "InsureDeFi is a decentralized insurance platform that provides a variety of insurance products in the DeFi space. It operates on the principle of pooled risk to provide coverage against potential smart contract failures, wallet hacks, and other risks.",
+        "title": "Introduction of Optional Insurance Plans with Variable Benefits",
+        "description": "Adapting to community inputs, the counterproposal introduces optional insurance plans with varying degrees of benefits instead of changing the premium structure. Users can choose their insurance plans based on individual needs and risk tolerance. Lower premium plans would attract more users, while higher premium plans offer more comprehensive coverage. These changes will maintain our platform's simplicity and user-friendly approach while enhancing user experience and platform diversity. Token holders are encouraged to review this counterproposal."
+    }
+}

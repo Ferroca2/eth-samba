@@ -1,0 +1,82 @@
+{
+    "initial_propose": {
+        "protocol_description": "DataStore is a decentralized protocol for secured, peer-to-peer data storage and sharing services. Allowing users to store and access data in a synchronized and distributed manner, it aims to provide an efficient and reliable solution to data storage.",
+        "title": "Implementation of a Tiered Pricing Model Based on Storage Utilization",
+        "description": "DataStore currently employs a flat-rate pricing model, charging the same amount regardless of the volume of data stored. This new proposal aims to introduce a tiered pricing model, where the cost increases with the amount of stored data. The intention is to ensure fair use of storage resources and to prevent network congestion caused by massive storage by a few users. As this can change the cost dynamics for users, we invite the community and token holders to deliberate on this proposal."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "A tiered pricing model will be much fairer to those who only use a small amount of storage."
+        },
+        {
+            "id": "2",
+            "comment": "If we're aiming for accessibility and usage encouragement, a flat-rate model may still be the best approach."
+        },
+        {
+            "id": "3",
+            "comment": "How will the pricing tiers be determined? What would be the cost for each tier?"
+        },
+        {
+            "id": "4",
+            "comment": "High-volume storage users might not be happy with the change. We might lose some of our user base."
+        },
+        {
+            "id": "5",
+            "comment": "I think a tiered model allows for much-needed scalability and will help us deal with network congestion."
+        },
+        {
+            "id": "6",
+            "comment": "Such a change will require clear communication to avoid any misunderstanding among the users."
+        },
+        {
+            "id": "7",
+            "comment": "A step-wise model, which we currently have, maintains simplicity. The proposed model may complicate things."
+        },
+        {
+            "id": "8",
+            "comment": "An increase in cost for high-volume users may encourage more efficient use of storage space."
+        },
+        {
+            "id": "9",
+            "comment": "Will the existing users be grandfathered into their current pricing, or will they also be subject to the new model?"
+        },
+        {
+            "id": "10",
+            "comment": "If we switch to a tiered pricing model, we need to ensure ongoing cost predictability for all users."
+        },
+        {
+            "id": "11",
+            "comment": "The tiered pricing model may discourage high-volume but infrequent users from using our services."
+        },
+        {
+            "id": "12",
+            "comment": "While this seems more fair, I worry it might attract users that bounce around services for the best deal, affecting our stable user base."
+        },
+        {
+            "id": "13",
+            "comment": "We should consider dynamic pricing based on network usage trends and capacity, rather than pre-defined tiers."
+        },
+        {
+            "id": "14",
+            "comment": "The proposal is logical, but it should clearly outline how it will maintain or improve the value we provide to our users."
+        },
+        {
+            "id": "15",
+            "comment": "Can we offer a trial period for different tiers to give users a chance to find the tier that fits them best?"
+        },
+        {
+            "id": "16",
+            "comment": "Though the proposal looks good, we must ensure not to lose sight of our goal. We're here to provide a decentralized and affordable storage solution."
+        },
+        {
+            "id": "17",
+            "comment": "To keep us competitive, maybe we can consider adding more features to upper tiers aside from enhanced storage capacity."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "DataStore is a decentralized protocol for secured, peer-to-peer data storage and sharing services. Allowing users to store and access data in a synchronized and distributed manner, it aims to provide an efficient and reliable solution to data storage.",
+        "title": "Implementation of a Flexible Pricing Model with Enhanced Features",
+        "description": "With the community's feedback taken into account, the counterproposal suggests implementing a flexible pricing model that includes storage-based tiers as well as feature-based tiers. Users can choose the tier that best suits their storage needs while also gaining access to enhanced features at higher levels. Existing users will have the freedom to continue under their current plan or opt into the new model, ensuring cost predictability and stability. The community and token holders are invited to discuss this new proposal."
+    }
+}

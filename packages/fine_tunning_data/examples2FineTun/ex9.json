@@ -1,0 +1,82 @@
+{
+    "initial_propose": {
+        "protocol_description": "TrustLend is a decentralized lending platform that enables borrowing and lending of cryptocurrencies with user-controlled parameters. Its goal is to democratize access to financial services.",
+        "title": "Shifting From Fixed to Dynamic Interest Rates Based on Market Conditions",
+        "description": "Currently, TrustLend has a fixed interest rate for all loan types irrespective of market fluctuations. This proposal recommends shifting to dynamic interest rates that react to market conditions, ensuring better risk management and incentives for lenders. While this might optimize profits, the change could also impact user experience and requires careful consideration from token holders and the community."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "How would determining the dynamic rates work? There should be clearly-defined parameters."
+        },
+        {
+            "id": "2",
+            "comment": "I worry about the unpredictability that comes with dynamic interest rates. This might harm ordinary users."
+        },
+        {
+            "id": "3",
+            "comment": "The volatile nature of cryptocurrencies could make this increasingly complex."
+        },
+        {
+            "id": "4",
+            "comment": "This could attract more sophisticated lenders who understand and can navigate market dynamics."
+        },
+        {
+            "id": "5",
+            "comment": "It should be introduced gradually, with users given sufficient time to adapt."
+        },
+        {
+            "id": "6",
+            "comment": "How will these changes be communicated to users? Transparency is critical."
+        },
+        {
+            "id": "7",
+            "comment": "There needs to be a maximum cap on interest rates to ensure borrowers are not overly burdened."
+        },
+        {
+            "id": "8",
+            "comment": "If executed properly, dynamic rates could be a selling point, showing that TrustLend is responsive to market needs."
+        },
+        {
+            "id": "9",
+            "comment": "Fixed rates provide stability for users and this shift could potentially drive away those looking for certainty."
+        },
+        {
+            "id": "10",
+            "comment": "We might need to put in place additional customer support capabilities to address potential user questions and confusion."
+        },
+        {
+            "id": "11",
+            "comment": "We should analyze historical data to simulate the effects of dynamic interest rates before implementing the change."
+        },
+        {
+            "id": "12",
+            "comment": "To ease into this change, we could offer both options to see what users prefer before completely switching."
+        },
+        {
+            "id": "13",
+            "comment": "Could we add features to alert users about steep interest rate changes to manage expectations?"
+        },
+        {
+            "id": "14",
+            "comment": "Is making the platform more complex really the best path forward? Simplicity is one of our strong points."
+        },
+        {
+            "id": "15",
+            "comment": "The decision should be based on what will encourage more activity on the platform."
+        },
+        {
+            "id": "16",
+            "comment": "This seems like a decision motivated by maximizing profit at the expense of user experience."
+        },
+        {
+            "id": "17",
+            "comment": "I think having access to loans with interest rates reflecting the current market retains users and attracts new ones."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "TrustLend is a decentralized lending platform that enables borrowing and lending of cryptocurrencies with user-controlled parameters. Its goal is to democratize access to financial services.",
+        "title": "Offering Both Fixed and Dynamic Interest Rates to Cater to User Preferences",
+        "description": "Acknowledging the community's diverse views, this revised proposal offers the choice of both fixed and dynamic interest rates. For users preferring stability, fixed rates will remain available. Those comfortable with risk and market navigation could select dynamic rates. Clear parameters will define dynamic rate adjustments, with communication alerts for substantial changes. A maximum cap will ensure borrower protection while dynamic rates will be introduced gradually to allow user adaptation. The dual options aim to cater to a broader range of user preferences, maintaining existing users while appealing to new ones. Token holders are invited to deliberate this comprehensive proposal."
+    }
+}

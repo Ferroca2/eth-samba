@@ -1,0 +1,94 @@
+{
+    "initial_propose": {
+        "protocol_description": "PredictChain is a decentralized prediction markets platform that allows users to speculate on the outcome of future events using crypto tokens. By leveraging the wisdom of the crowds, it aims to create a more accurate forecasting tool.",
+        "title": "Adoption of Arbitration System to Handle Market Disputes",
+        "description": "Currently, PredictChain has no formalized system for handling disputes in prediction markets. This proposal recommends the introduction of an arbitration system, where selected community members (arbitrators) resolve market disputes. The goal is to improve fairness in the system and to tackle misinterpretations, ambiguous market wordings, or other inconsistencies. This proposal being a major change, careful discussion and feedback from the community and token holders are required."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "Adopting an arbitration system will enhance the credibility of our platform."
+        },
+        {
+            "id": "2",
+            "comment": "Who will be eligible to arbitrate? There should be clear guidelines and criteria for this."
+        },
+        {
+            "id": "3",
+            "comment": "A central body of arbitrators contradicts the decentralized nature of our platform."
+        },
+        {
+            "id": "4",
+            "comment": "I am concerned about potential bias and unfairness in the arbitration process."
+        },
+        {
+            "id": "5",
+            "comment": "Appointing arbitrators might lead to a more centralized system. We should be cautious."
+        },
+        {
+            "id": "6",
+            "comment": "An arbitration system might create an additional layer of bureaucracy in our mechanism."
+        },
+        {
+            "id": "7",
+            "comment": "Clear parameters are required to determine what constitutes a dispute."
+        },
+        {
+            "id": "8",
+            "comment": "If arbitration becomes a long process, it could impact the dynamic nature of prediction markets."
+        },
+        {
+            "id": "9",
+            "comment": "Should stakeholders involved in a contested market be allowed to vote in the dispute resolution?"
+        },
+        {
+            "id": "10",
+            "comment": "We need checks and balances to ensure that the arbitration system is not exploited."
+        },
+        {
+            "id": "11",
+            "comment": "This seems like a step in the right direction, but we need to handle this very carefully."
+        },
+        {
+            "id": "12",
+            "comment": "Arbitration adds a much-needed filter to avoid malicious or improper market proposals."
+        },
+        {
+            "id": "13",
+            "comment": "Perhaps the community can vote on arbitrators to ensure decentralization?"
+        },
+        {
+            "id": "14",
+            "comment": "Can there be an appeal mechanism in case of a dissatisfactory arbitration outcome?"
+        },
+        {
+            "id": "15",
+            "comment": "I think a dedicated arbitration team should be trained and carry out the job professionally."
+        },
+        {
+            "id": "16",
+            "comment": "Arbitrators should be incentivized fairly. They will be carrying out an important task for the system."
+        },
+        {
+            "id": "17",
+            "comment": "Facilitating an effective and fair dispute resolution mechanism is crucial for the longevity of our platform."
+        },
+        {
+            "id": "18",
+            "comment": "We must protect the rights of our users during arbitration. Their inputs should be taken into account."
+        },
+        {
+            "id": "19",
+            "comment": "The arbitration process should be transparent and the reasoning behind each decision should be documented and accessible."
+        },
+        {
+            "id": "20",
+            "comment": "How will we ensure the neutrality and impartiality of the arbitrators?"
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "PredictChain is a decentralized prediction markets platform that allows users to speculate on the outcome of future events using crypto tokens. By leveraging the wisdom of the crowds, it aims to create a more accurate forecasting tool.",
+        "title": "Incorporation of the Community-Governed Arbitration System",
+        "description": "Revising the initially proposed arbitration system based on the community's concerns about centralization, bias and transparency, this proposal puts forth a community-governed arbitration system. Arbitrators are elected from the community via voting, expected to uphold fair and transparent dispute resolution. Specific criteria for eligibility, detailed guidelines for dispute identification, and provisions for an appeal mechanism will be included. This aims to resolve market disputes while respecting the key principle of decentralization. Token holders and community members are encouraged to deliberate on the merits of this improved proposal."
+    }
+}

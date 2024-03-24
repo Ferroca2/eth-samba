@@ -5,7 +5,6 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract Voting {
     uint256 public currentProtocol;
-    uint256 public currentProposal;
     mapping(address => Protocol) public protocols;
     mapping(uint256 => Proposal) public proposals; // (proposalId => Proposal)
     mapping(uint256 => Vote[]) public votes; // (proposalId => Vote[])
@@ -78,7 +77,6 @@ contract Voting {
 
     constructor() {
         currentProtocol = 0;
-        currentProposal = 0;
     }
 
     function addProtocol(
@@ -109,11 +107,12 @@ contract Voting {
 
     function makeProposal(
         address _governance,
+        uint256 _id,
         string memory _title,
         string memory _description
-    ) external {
-        proposals[currentProposal] = Proposal(
-            currentProposal,
+    ) external idNotUsed(_id) {
+        proposals[_id] = Proposal(
+            _id,
             _governance,
             _title,
             _description,
@@ -123,7 +122,7 @@ contract Voting {
         );
 
         emit ProposalMade(
-            currentProposal,
+            _id,
             _governance,
             _title,
             _description,
@@ -131,14 +130,12 @@ contract Voting {
             0,
             SITUATION.VOTING
         );
-        
-        currentProposal++;
     }
     
     function voteForProposal(
         uint256 _proposalId,
         OPTION _vote
-    ) external hasVoted(_proposalId) {
+    ) external hasNotVoted(_proposalId) {
         Proposal storage proposal = proposals[_proposalId];
         Protocol storage protocol = protocols[proposal.protocolAddress];
 
@@ -197,13 +194,18 @@ contract Voting {
         );
     }
 
-    modifier hasVoted(uint256 _proposalId) {
+    modifier hasNotVoted(uint256 _proposalId) {
         require(!voted[_proposalId][msg.sender], "Already voted");
         _;
     }
     
     modifier alreadyExists(address _governance) {
         require(protocols[_governance].owner == address(0), "Already exists");
+        _;
+    }
+
+    modifier idNotUsed(uint256 _id) {
+        require(proposals[_id].protocolAddress == address(0), "Id already used");
         _;
     }
 }

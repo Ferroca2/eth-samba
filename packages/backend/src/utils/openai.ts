@@ -1,5 +1,6 @@
 import OpenAI from "openai";
 import dotenv from "dotenv";
+import { filterPrompt } from "./prompt";
 dotenv.config();
 
 const openai = new OpenAI();
@@ -11,6 +12,17 @@ export const getOpenAIResponse = async (prompt: string) => {
         {"role": "user", "content": prompt},
       ],
     model: process.env.CHAT_MODEL_ID!,
+    response_format: { type: "json_object" },
+  });
+  return completion.choices[0].message.content;
+}
+
+export const getOpenAIFilter = async (prompt: string) => {
+  const completion = await openai.chat.completions.create({
+    messages: [{"role": "system", "content": "You are an assistant that out comments that are not related with the situation in a json."},
+        {"role": "user", "content": prompt},
+      ],
+    model: "gpt-4-turbo-preview",
     response_format: { type: "json_object" },
   });
   return completion.choices[0].message.content;

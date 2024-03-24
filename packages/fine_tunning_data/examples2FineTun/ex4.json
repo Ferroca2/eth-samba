@@ -1,0 +1,82 @@
+{
+    "initial_propose": {
+        "protocol_description": "InsureDAO is a decentralized insurance platform providing peer-to-peer insurance services with automated reward and claim processing via smart contracts.",
+        "title": "Increasing the Insurance Underwriting Fee for Enhanced Sustainability",
+        "description": "InsureDAO currently sets a 2% underwriting fee for each insurance policy. To ensure sustainability and profitability, this proposal suggests increasing the underwriting fee to 2.5%. The adjustment might generate more revenue and ensure the platform's service quality. However, it requires thoughtful consideration from our community and token holders."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "If we raise fees, won't it deter users from insuring their assets?"
+        },
+        {
+            "id": "2",
+            "comment": "I understand the need for profitability, but we must also maintain our user base."
+        },
+        {
+            "id": "3",
+            "comment": "Can we look into other revenue streams instead of increasing underwriting fees?"
+        },
+        {
+            "id": "4",
+            "comment": "Perhaps we could increase fees gradually, rather than all at once?"
+        },
+        {
+            "id": "5",
+            "comment": "We need to consider how this change will impact our competitive position in the market."
+        },
+        {
+            "id": "6",
+            "comment": "This could potentially harm our growth. We should look for other ways to cut costs instead."
+        },
+        {
+            "id": "7",
+            "comment": "Would it be possible to increase fees only for higher-risk policies?"
+        },
+        {
+            "id": "8",
+            "comment": "Let's be sure to effectively communicate any changes to our users to maintain trust."
+        },
+        {
+            "id": "9",
+            "comment": "We should also improve our services if we want to justify increase in fees."
+        },
+        {
+            "id": "10",
+            "comment": "A fee increase might be necessary to maintain platform operations, even if it's unpopular."
+        },
+        {
+            "id": "11",
+            "comment": "I'd support a fee increase if it translates to faster claim processing."
+        },
+        {
+            "id": "12",
+            "comment": "Is there any evidence to suggest this increase won't lead to a significant user drop-off?"
+        },
+        {
+            "id": "13",
+            "comment": "This seems too risky without proper market analysis and user feedback."
+        },
+        {
+            "id": "14",
+            "comment": "Before deciding, should we explore how this might affect the number of new policies?"
+        },
+        {
+            "id": "15",
+            "comment": "How about creating a model to predict the impact of fee increases on user behaviour and revenue?"
+        },
+        {
+            "id": "16",
+            "comment": "Maybe we could offer a discount to long-term users to ease the blow?"
+        },
+        {
+            "id": "17",
+            "comment": "I think a slight increase won't hurt, especially if it contributes to better service quality."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "InsureDAO is a decentralized insurance platform providing peer-to-peer insurance services with automated reward and claim processing via smart contracts.",
+        "title": "Gradual Increase in Underwriting Fee with Enhanced Services",
+        "description": "Reflecting community's feedback, this counter-proposal suggests a gradual rather than an immediate increase in the underwriting fee, shifting from 2% to 2.5% over a defined period. This more conservative approach acknowledges the impacts on the user experience and market competitiveness. Fees will only rise for high-risk policies, while long-term users will be offered a discount. All measures aim to balance profitability with user satisfaction and market competitiveness. All revenue from this restructuring will be channeled towards improving InsureDAO's services and claim processing speed, ensuring both enhanced user experience and sustainability of the platform. We urge the platform's community and token holders to deliberate on this careful balance of considerations."
+    }
+}

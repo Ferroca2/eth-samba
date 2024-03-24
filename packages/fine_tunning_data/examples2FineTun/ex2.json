@@ -1,0 +1,94 @@
+{
+  "initial_propose": {
+    "protocol_description": "Web3Storage is a decentralized data storage protocol that provides safe and secure storage solutions. Token holders provide storage space and in return receive tokens as compensation.",
+    "title": "Implementing a Flat Fee Structure for Storage Market",
+    "description": "Currently, Web3Storage operates on a dynamic fee structure based on market demand and supply. This proposal suggests transitioning to a flat fee structure for data storage to simplify pricing and increase transparency. We propose a flat fee of 0.01 tokens/GB. This could attract more users due to the predictability of costs. However, it requires careful consideration from token holders as this shift could potentially impact the protocol's market dynamics and income streams."
+  },
+  "comments": [
+    {
+      "id": "1",
+      "comment": "The transition to a flat fee can provide a more predictable income for the token holders providing the storage."
+    },
+    {
+      "id": "2",
+      "comment": "Moving to a flat fee structure would make it difficult to adjust prices based on market conditions."
+    },
+    {
+      "id": "3",
+      "comment": "Flat fee can make it simpler for users but what about the cost-benefit for token holders?"
+    },
+    {
+      "id": "4",
+      "comment": "We need to consider the impact on different regions, as the cost of providing storage can vary significantly."
+    },
+    {
+      "id": "5",
+      "comment": "A flat fee could also encourage more people to use our protocol, potentially leading to greater demand."
+    },
+    {
+      "id": "6",
+      "comment": "We need to model out the potential fiscal impacts before making a final decision."
+    },
+    {
+      "id": "7",
+      "comment": "Could we pilot this flat fee structure in a localized market, before a broader roll-out?"
+    },
+    {
+      "id": "8",
+      "comment": "What happens when costs of providing storage increase? Will the flat fee cover our expenses?"
+    },
+    {
+      "id": "9",
+      "comment": "We need to think about how this will impact the protocol's competitiveness in the long term."
+    },
+    {
+      "id": "10",
+      "comment": "Could we consider a tiered flat fee structure, with prices based on the amount of data stored?"
+    },
+    {
+      "id": "11",
+      "comment": "If we make this change and it's not profitable, how easy would it be to revert back to the dynamic pricing model?"
+    },
+    {
+      "id": "12",
+      "comment": "This might be a good solution for attracting new users, but we must not forget our current users and how this may affect them."
+    },
+    {
+      "id": "13",
+      "comment": "Instead of a flat fee for everyone, could we consider discounts for long-term contracts or large-scale data storage needs?"
+    },
+    {
+      "id": "14",
+      "comment": "What about the technological implications of such a change? Would our current platform be able to handle it?"
+    },
+    {
+      "id": "15",
+      "comment": "Before deciding on this, we should conduct a thorough market analysis to examine potential impacts."
+    },
+    {
+      "id": "16",
+      "comment": "In principle, a flat fee is simpler, but the devil is always in detail. I'd like to see more concrete numbers."
+    },
+    {
+      "id": "17",
+      "comment": "Flat rates may attract larger entities who can take advantage of the simplicity. It may, however, discourage smaller users due to lack of flexibility."
+    },
+    {
+      "id": "18",
+      "comment": "We should focus first on improving the efficiency and speed of our protocol instead of pricing adjustments."
+    },
+    {
+      "id": "19",
+      "comment": "If we change to flat fee, won't it disrupt our dynamic market-led pricing system?"
+    },
+    {
+      "id": "20",
+      "comment": "Simplicity and predictability of costs could be a competitive advantage, especially for new users."
+    }
+  ],
+  "counter_propose": {
+    "protocol_description": "Web3Storage is a decentralized data storage protocol that provides safe and secure storage solutions. Token holders provide storage space and in return receive tokens as compensation.",
+    "title": "Adoption of a Tiered Flat Fee Structure for Decentralized Data Storage",
+    "description": "In light of the feedback from the token holders, the revised proposal suggests implementation of a tiered flat fee structure for data storage. Under this design, users would pay a lower flat fee per gigabyte as the amount of data stored increases. We could also offer discounts for long-term contracts, incentivizing sustained usage. This responds to concerns about the impact on varying costs of storage in different regions and market conditions. Additionally, this proposal seeks a localized pilot of the new pricing structure to assess its impact before fully transitioning. Careful analysis of potential fiscal impacts and market analysis will be carried out to ensure the viability and sustainability of this new pricing system. Token holders need to contemplate on the potential adaptability and improvements required in Web3Storage's governance and technology in order to facilitate this transition. This plan, although a change, upholds Web3Storage's commitment to competitive pricing, value creation for token holders, and superior service."
+  }
+}
