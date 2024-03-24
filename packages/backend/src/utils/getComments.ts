@@ -26,15 +26,12 @@ export const getComments = async (proposal_id: number, max_amount = 20): Promise
     try {
       const response = await axios.get(`https://explorer.old.testnet.aurora.dev/api/v2/addresses/${address}/transactions`);
       const creatorInfo = response.data;
-      console.log(creatorInfo);
-  
       const age = creatorInfo.items[creatorInfo.items.length - 1];
   
       const date = new Date(age.timestamp);
   
       return date;
     } catch (error) {
-      console.error("Error fetching creator info:", error);
       return new Date(Date.now());
     }
   };
@@ -52,15 +49,12 @@ export const getComments = async (proposal_id: number, max_amount = 20): Promise
   }));
 
   const filtered = await getOpenAIFilter(filterPrompt(proposal!.protocol.description, proposal!.title, proposal!.description, commentsWithAge));
-  console.log(filtered);
 
-  const filterJSON = JSON.parse(filtered!).rejected_ids.map((id: number) => id);
-  console.log(filterJSON)
-  
+  const filterJSON = JSON.parse(filtered!).rejected_ids.map((id: number) => id);  
 
   const filteredComments = commentsWithAge.filter((comment) => !filterJSON.includes(comment.id));
   
-  
+
   return filteredComments.map((comment, index) => ({
     id: index.toString(),
     comment: comment.content,

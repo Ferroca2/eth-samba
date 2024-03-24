@@ -477,11 +477,13 @@ app.post('/settle', async (
 
     const response = JSON.parse(ai_response);
 
+    console.log(response);
+
     if (!response.counter_propose) {
-      return res.status(400).json({ error: 'Error settling protocol' });
+      return res.status(400).json({ error: 'No counter Proposal' });
     } 
     if (!response.counter_propose.description) {
-      return res.status(400).json({ error: 'Error settling protocol' });
+      return res.status(400).json({ error: 'No desc' });
     }
 
     const ipfs = await pinata.pinJSONToIPFS({
@@ -496,13 +498,15 @@ app.post('/settle', async (
       },
       data: {
         on_chain: true,
+        title: response.counter_propose.title || proposal.title,
+        description: response.counter_propose.description,
       }
     });
 
 
-    await contract.connect(wallet).makeProposal(proposal.protocol.address, proposal_id, response.new_proposal.title, ipfs.IpfsHash);
+    await contract.connect(wallet).makeProposal(proposal.protocol.address, proposal_id, response.counter_propose.title, ipfs.IpfsHash);
 
-    return res.status(200).json({ response });
+    return res.status(200).json({ ...response.counter_propose });
   } catch (error) {
     console.log(error);
     return res.status(400).json({ error: 'Error settling protocol' });
