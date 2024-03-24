@@ -1,10 +1,13 @@
 import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
+import votingAbi from './utils/contractAbi.json';
 import { prisma } from './utils/database';
 import swaggerDocument from "./swagger.json";
 import swaggerUi from 'swagger-ui-express';
 import helmet from "helmet";
 import cors from "cors";
+import { getOpenAIResponse } from './utils/openai';
+import { ethers } from 'ethers';
 dotenv.config();
 
 const app = express();
@@ -21,9 +24,15 @@ app.use(express.json({ limit: "10mb" }));
 // Serve your Swagger documentation
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
+
   res.send('Hello World!');
 });
+
+// app.get('/test', async (req, res) => {
+//   const test = await getOpenAIResponse();
+//   res.send('Hello World!');
+// });
 
 
 app.post('/protocol', async (
@@ -157,12 +166,38 @@ app.post('/proposal', async (
   const { protocol_id, creator, title, description } = req.body;
 
   try {
+    //verify if the protocol exists
+    const protocol = await prisma.protocol.findUnique({
+      where: {
+        id: parseInt(protocol_id),
+      },
+      select: {
+        address: true,
+      }
+    });
+
+    if(!protocol) {
+      return res.status(404).json({ error: 'Protocol not found' });
+    }
+
+    const provider = new ethers.providers.JsonRpcProvider(process.env.PROVIDER);
+
+    // Create a contract instance
+    const contract = new ethers.Contract(process.env.CONTRACT_ADDRESS as string, votingAbi.abi, provider);
+
+    // Call the contract to get the Protocol struct for the given address
+    const object = await contract.protocols(protocol.address);
+
+    //now + time in seconds
+    const end_time = new Date(Date.now() + object.commentTime * 1000);
+
     const proposal = await prisma.proposal.create({
       data: {
         protocol_id: parseInt(protocol_id),
         creator,
         title, 
-        description
+        description,
+        end_time: end_time,
       },
     });
 

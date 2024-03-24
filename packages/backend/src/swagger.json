@@ -21,16 +21,6 @@
         }
       }
     },
-    "/test": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/protocol": {
       "post": {
         "tags": [
@@ -100,6 +90,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           }
         },
         "requestBody": {
