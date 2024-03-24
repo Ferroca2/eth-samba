@@ -1,0 +1,74 @@
+{
+    "initial_propose": {
+        "protocol_description": "MusicFlow is a decentralized music streaming protocol allowing artists to upload their work while fans can stream songs and directly support their favorite artists. The protocol aims to redistribute value within the music industry in a more equitable and transparent manner.",
+        "title": "Implementation of Fan-Powered Royalties rather than Pro-Rata Payouts",
+        "description": "Presently, MusicFlow operates on a pro-rata model, distributing monthly subscription revenues based on total platform streams. This proposal suggests the introduction of 'Fan-Powered Royalties' where each user's subscription fee is distributed solely to the artists they listen to. This model could provide better support to niche artists or those with a dedicated but small fanbase. As this change will impact the earnings of different artists, it invites discussion from the community and token holders."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "This suggestion feels more fair and will directly support the artists I choose to listen to."
+        },
+        {
+            "id": "2",
+            "comment": "With 'Fan-Powered Royalties', small-time artists with a devoted fanbase will be better compensated for their work."
+        },
+        {
+            "id": "3",
+            "comment": "Will this move discourage artists from coming on board, who currently benefit under the 'Pro-Rata' model?"
+        },
+        {
+            "id": "4",
+            "comment": "I'm concerned that shifting the model might not be as lucrative for popular artists as the current system."
+        },
+        {
+            "id": "5",
+            "comment": "Shouldn’t royalties be based on an artist's popularity or their contribution to the platform?"
+        },
+        {
+            "id": "6",
+            "comment": "Implementing 'Fan-Powered Royalties' will require transparent auditing to ensure fair payouts."
+        },
+        {
+            "id": "7",
+            "comment": "Under the new model, some listeners' subscription fees might go entirely to a single artist. Is that fair?"
+        },
+        {
+            "id": "8",
+            "comment": "The proposed model values user choice and will improve artist-fan relationships."
+        },
+        {
+            "id": "9",
+            "comment": "Could we consider a hybrid model, incorporating both 'Pro-Rata Payouts' and 'Fan-Powered Royalties'?"
+        },
+        {
+            "id": "10",
+            "comment": "I worry that the 'Fan-Powered Royalties' model might inadvertently favor popular genres or artists over others."
+        },
+        {
+            "id": "11",
+            "comment": "Why not let users decide how they want their subscription fees distributed?"
+        },
+        {
+            "id": "12",
+            "comment": "This might provide a chance for new and less mainstream artists to gain traction."
+        },
+        {
+            "id": "13",
+            "comment": "What about tracks with multiple artists? How will the fee be divided?"
+        },
+        {
+            "id": "14",
+            "comment": "We might need a robust system to track how much each user listens to each artist."
+        },
+        {
+            "id": "15",
+            "comment": "The proposal seems fair, but it's crucial to ensure transparency in the payout distribution."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "MusicFlow is a decentralized music streaming protocol allowing artists to upload their work while fans can stream songs and directly support their favorite artists. The protocol aims to redistribute value within the music industry in a more equitable and transparent manner.",
+        "title": "Introducing User-Choice Payouts as a Hybrid Model",
+        "description": "Reflecting the community's diverse extent of views, this counter-proposal recommends a hybrid model where users can choose how their subscription fees are distributed. They can choose to stick with the current 'Pro-Rata' model or opt for the new 'Fan-Powered Royalties'. This way, the protocol provides flexibility to support artists across the spectrum and ensures that users have control over their contribution. The community and token holders are encouraged to discuss this proposal."
+    }
+}

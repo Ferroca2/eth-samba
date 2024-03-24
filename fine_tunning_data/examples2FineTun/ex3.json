@@ -1,0 +1,94 @@
+{
+    "initial_propose": {
+        "protocol_description": "LoanDeFi is a peer-to-peer lending platform operating on decentralized technologies. It empowers users to lend or borrow assets directly with each other, eliminating the need for a traditional intermediary.",
+        "title": "Increasing Loan Origination Fee to Strengthen Revenue",
+        "description": "Currently, LoanDeFi charges a 1% fee for every loan originated on the platform. To boost revenue and maintain the platform's high level of service, this proposal suggests increasing the fee to 1.5%. We believe this adjustment can generate more income without discouraging users from utilizing our services. Constructive thoughts and careful evaluation are greatly needed from our community and token holders for this proposed change."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "Increasing the fee might discourage some borrowers, affecting loan volumes."
+        },
+        {
+            "id": "2",
+            "comment": "This might lead to higher revenue, but I value the accessibility of our platform."
+        },
+        {
+            "id": "3",
+            "comment": "Could cost decreases be considered to preserve original fee amounts instead?"
+        },
+        {
+            "id": "4",
+            "comment": "Other platforms charge higher fees. We might still be competitive even after the raise."
+        },
+        {
+            "id": "5",
+            "comment": "How does this affect the interest rates and repayment terms for borrowers?"
+        },
+        {
+            "id": "6",
+            "comment": "A fee increase works if put to good use - like improving platform features."
+        },
+        {
+            "id": "7",
+            "comment": "High fees may deter new users from joining the platform."
+        },
+        {
+            "id": "8",
+            "comment": "By raising fees, we may inadvertently push existing users to seek other platforms."
+        },
+        {
+            "id": "9",
+            "comment": "Instead, how about offering enhanced features or services for an increased fee?"
+        },
+        {
+            "id": "10",
+            "comment": "We need to maintain a balance between revenue and user satisfaction."
+        },
+        {
+            "id": "11",
+            "comment": "What if we implement higher fees for larger loans only?"
+        },
+        {
+            "id": "12",
+            "comment": "We need a more detailed plan on how this increased fee will benefit the platform and users."
+        },
+        {
+            "id": "13",
+            "comment": "Could we consider a lower increase initially, and evaluate its impacts before implementing a full increase?"
+        },
+        {
+            "id": "14",
+            "comment": "The change may lead to higher revenue but at the cost of our user base."
+        },
+        {
+            "id": "15",
+            "comment": "We should prioritize the optimization of existing revenue streams before considering a fee increase."
+        },
+        {
+            "id": "16",
+            "comment": "Previous changes worked well due to community involvement. We need more input before a decision."
+        },
+        {
+            "id": "17",
+            "comment": "This is a significant change. Are there safeguards if results are not as anticipated?"
+        },
+        {
+            "id": "18",
+            "comment": "The growth and sustainability of LoanDeFi should not be compromised by a fee hike."
+        },
+        {
+            "id": "19",
+            "comment": "The proposal's objective is understandable, but does it align with our long-term growth plans?"
+        },
+        {
+            "id": "20",
+            "comment": "A fee increase that’s tied to delivering additional value to users will be more palatable."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "LoanDeFi is a peer-to-peer lending platform operating on decentralized technologies. It empowers users to lend or borrow with each other directly, eliminating the need for a traditional intermediary.",
+        "title": "Implementation of a Sliding Scale Loan Origination Fee",
+        "description": "Considering the diverse views of our community, we propose a revised model for our loan origination fee. Instead of a blanket increase, we're suggesting a sliding scale fee structure based on the loan amount. Smaller loans will continue to attract a 1% fee, while larger loans will incur 1.5%. This strategy maintains accessibility for smaller users while generating additional revenue from bigger loans. Furthermore, revenues from this fee increase will be reinvested into improving the platform's features and enhancing user satisfaction. As with all significant changes, we ensure this plan's flexibility, allowing adjustments based on community feedback and market dynamics. We encourage our community and token holders to carefully evaluate this proposal."
+    }
+}

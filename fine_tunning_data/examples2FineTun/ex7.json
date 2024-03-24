@@ -1,0 +1,78 @@
+{
+    "initial_propose": {
+        "protocol_description": "OpenArt is a decentralized platform that facilitates the trading and exchange of NFTs with a focus on artwork. It enables creators to sell their work directly to collectors without intermediaries.",
+        "title": "Introduction of Variable Commission on Sales Based on Listing Price",
+        "description": "OpenArt secures revenues by charging a flat 2.5% commission on all sales. This proposal advocates changing to a variable commission system based on the listing price of the NFT. Artwork listed at a higher price would incur a smaller percentage commission, while those at lower prices would face a higher rate. This could optimize platform revenues and balance the scale of fees for sellers. A thoughtful discussion and feedback is required from our community and token holders."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "Those variable commission rates could discourage new and smaller artists from our platform."
+        },
+        {
+            "id": "2",
+            "comment": "Higher value transactions already result in higher fees, even with flat rates. Why impose further reductions?"
+        },
+        {
+            "id": "3",
+            "comment": "I believe this could attract more premium collectibles to our platform."
+        },
+        {
+            "id": "4",
+            "comment": "This proposal seems to favor only high-end art space, undermining our platform's inclusivity."
+        },
+        {
+            "id": "5",
+            "comment": "Wouldn't a fluctuating fee confuse users? They would need to calculate it every time."
+        },
+        {
+            "id": "6",
+            "comment": "We should focus on integrating more features rather than changing our fee structure."
+        },
+        {
+            "id": "7",
+            "comment": "It's important to maintain a balance between incentivizing premium listings and supporting upcoming artists."
+        },
+        {
+            "id": "8",
+            "comment": "Before implementing this, it's vital to conduct a thorough analysis of how it affects overall revenues."
+        },
+        {
+            "id": "9",
+            "comment": "This could potentially leave room for manipulation of prices, going against the decentralized ethos."
+        },
+        {
+            "id": "10",
+            "comment": "If this decision increases revenues without affecting smaller artists, why not?"
+        },
+        {
+            "id": "11",
+            "comment": "It seems like a change to favor the big fish. We should be careful not to alienate budding creators."
+        },
+        {
+            "id": "12",
+            "comment": "Creating an inclusive space should be a priority over expanding premium offerings."
+        },
+        {
+            "id": "13",
+            "comment": "Modifying the fee structure might affect the transparency of our operations."
+        },
+        {
+            "id": "14",
+            "comment": "Commission fees should be kept uncomplicated. Users appreciate simplicity."
+        },
+        {
+            "id": "15",
+            "comment": "We need to consider the impact on art price variability in response to the changing fee."
+        },
+        {
+            "id": "16",
+            "comment": "Variable commission might deter some, but it opens the path to courting high-end collectors."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "OpenArt is a decentralized platform that facilitates the trading and exchange of NFTs with a focus on artwork. It enables creators to sell their work directly to collectors without intermediaries.",
+        "title": "Implement Tiered Commission Cap for Inclusive Profit Optimization",
+        "description": "Based on community feedback, the revised proposal maintains a flat 2.5% commission, introducing a tier-based cap on total commission. Lower-priced artworks will have a lower cap, reducing the burden on smaller artists, while higher-priced pieces will have a higher cap, still taking a smaller percentage of the sale but ensuring meaningful revenue for the platform. This approach tries to incentivize premium listings without compromising on inclusivity. It balances the progressive ethos of NFTs with operational sustainability. Token holders are urged to thoughtfully consider this revised proposal."
+    }
+}

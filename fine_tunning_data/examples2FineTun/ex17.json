@@ -1,0 +1,74 @@
+{
+    "initial_propose": {
+        "protocol_description": "StreamChain is a decentralized video streaming service utilizing blockchain technology to provide unique, transparent, user-controlled streaming options. Leveraging peer-to-peer network architecture, it ensures the distribution of high-quality content across the globe.",
+        "title": "Introduction of Ad-Based Revenue For Content Creators",
+        "description": "At present, content creators on StreamChain receive earnings based solely on subscription charges and donations. This proposal suggests introducing an ad-based revenue model allowing creators to earn more from their content. Advertisements can provide a vital revenue source for content creators, resulting in increased content and quality. As this may impact viewer experience, a balance must be found between ad frequency and viewer satisfaction. Feedback from the community and token holders is requested."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "Incorporating ads might drive viewers away. StreamChain's ad-free experience draws viewers to the platform."
+        },
+        {
+            "id": "2",
+            "comment": "Ad-based revenue could help creators earn a sustainable income, boosting the overall content quality."
+        },
+        {
+            "id": "3",
+            "comment": "If we go ahead with this, can there be a mechanism where viewers can opt-out of ads for a higher subscription fee?"
+        },
+        {
+            "id": "4",
+            "comment": "Will this change tamper with the platform's decentralization if we have to rely on corporate advertising?"
+        },
+        {
+            "id": "5",
+            "comment": "We need to consider how to keep ads non-intrusive to maintain viewer satisfaction."
+        },
+        {
+            "id": "6",
+            "comment": "Ads might not guarantee stable revenue. They depend on market trends and advertiser policies."
+        },
+        {
+            "id": "7",
+            "comment": "Ad-based revenue is a tried-and-tested model for video platforms. It'll be useful for creators."
+        },
+        {
+            "id": "8",
+            "comment": "We need a balance to ensure that the viewing experience remains comfortable for subscribers."
+        },
+        {
+            "id": "9",
+            "comment": "How will StreamChain manage ad content must meet our community standards for acceptability?"
+        },
+        {
+            "id": "10",
+            "comment": "This may discourage users who joined StreamChain purely for its ad-free content."
+        },
+        {
+            "id": "11",
+            "comment": "It's important to have a clear understanding of the potential revenue increase from ad-generated income."
+        },
+        {
+            "id": "12",
+            "comment": "Maybe we could offer a premium, ad-free membership for viewers who prefer an uninterrupted experience."
+        },
+        {
+            "id": "13",
+            "comment": "For creators struggling to make enough on the current model, ad revenue could bring necessary relief."
+        },
+        {
+            "id": "14",
+            "comment": "We'll need to have a consensus on the amount of ad-viewing time required to supply ad-based revenue to creators."
+        },
+        {
+            "id": "15",
+            "comment": "This model could help incentivize creators to produce high-quality content, boosting the entire platform."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "StreamChain is a decentralized video streaming service utilizing blockchain technology to provide unique, transparent, user-controlled streaming options. Leveraging peer-to-peer network architecture, it ensures the distribution of high-quality content across the globe.",
+        "title": "Introduction of Opt-In Advertisement Model for Viewers and Creators",
+        "description": "Honoring the community's feedback regarding user experience and creator empowerment, the counterproposal suggests an opt-in advertising model. Here, viewers and creators can choose to view or monetize through ads. For viewers preferring an ad-free experience, a premium ad-free subscription option will be available. The proposed model aims to balance viewer satisfaction and creator incentives while maintaining StreamChain's decentralized ethos. Feedback from the community and token holders is solicited for this revised proposal."
+    }
+}

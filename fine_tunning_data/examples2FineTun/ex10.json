@@ -1,0 +1,94 @@
+{
+    "initial_propose": {
+        "protocol_description": "DataChain is a decentralized cloud data storage platform, offering secure, private, and robust data storage solutions across the blockchain.",
+        "title": "Increase in Storage Fees to Improve Network Infrastructure",
+        "description": "Currently, DataChain charges users a nominal fee for data storage. To improve the network infrastructure and provide better service quality, both in speed and reliability, this proposal suggests an increase in storage fees. It would allow for future enhancements and maintenance of the platform. As this could directly impact user costs, open discussion and feedback from the community and token holders are needed."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "The increase in fees may drive away potential consumers and affect the user base."
+        },
+        {
+            "id": "2",
+            "comment": "If the fee hike leads to better storage services and performance, I would support this."
+        },
+        {
+            "id": "3",
+            "comment": "We need to ensure that even after the fee hike, we remain competitive in the market."
+        },
+        {
+            "id": "4",
+            "comment": "Raising storage fees without an immediate upgrade in services could result in user dissatisfaction."
+        },
+        {
+            "id": "5",
+            "comment": "What else can we do to improve the network infrastructure without imposing additional costs on users?"
+        },
+        {
+            "id": "6",
+            "comment": "Can we consider a segmented pricing strategy? Different user groups could be charged differently based on their usage."
+        },
+        {
+            "id": "7",
+            "comment": "Before a fee hike, perhaps we could seek investments or explore partnerships for infrastructure upgrade."
+        },
+        {
+            "id": "8",
+            "comment": "We need to devise a plan where the fee increase impacts minimally the small or less frequent users."
+        },
+        {
+            "id": "9",
+            "comment": "Without proper data infrastructure, the platform cannot scale. So, a fee increase for this purpose is necessary."
+        },
+        {
+            "id": "10",
+            "comment": "Cost is a major factor for users when they choose a data storage platform. We need to keep that in mind."
+        },
+        {
+            "id": "11",
+            "comment": "The fee increase should be planned in a way that it is adaptable and does not burden users with a sudden spike."
+        },
+        {
+            "id": "12",
+            "comment": "Can we provide a detailed breakdown of why the fee hike is necessary and where the funds will be used?"
+        },
+        {
+            "id": "13",
+            "comment": "For long-term users, can we consider a loyalty program to offset the increase in fees?"
+        },
+        {
+            "id": "14",
+            "comment": "The fee increase seems justifiable if it brings noticeable improvements to the platform."
+        },
+        {
+            "id": "15",
+            "comment": "Instead of a direct fee increase, we could provide tiered packages with different levels of service."
+        },
+        {
+            "id": "16",
+            "comment": "Adding additional features as part of the increased cost could make it more acceptable to the users."
+        },
+        {
+            "id": "17",
+            "comment": "Why don't we consider a slight increase in fee in relation to the amount of data stored?"
+        },
+        {
+            "id": "18",
+            "comment": "Is there an alternative way to raise funds for infrastructure improvement like a fundraiser or token sale?"
+        },
+        {
+            "id": "19",
+            "comment": "A substantial reason and value proposition should be provided to the community for this fee increase."
+        },
+        {
+            "id": "20",
+            "comment": "Can we ensure that the fee increase will benefit the end-users in terms of service quality and performance?"
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "DataChain is a decentralized cloud data storage platform, offering secure, private, and robust data storage solutions across the blockchain.",
+        "title": "Introducing Data Usage Tiers for Efficiency and Infrastructure Improvement",
+        "description": "After thorough consideration of community opinions, this counter-proposal recommends implementing a tier-based pricing strategy. Users would be categorized based on their data usage, with fees structured accordingly. Low-volume users would face minimal costs, while higher volume users, benefiting more from infrastructure upgrades, would contribute more. This ensures improvements do not disproportionately impact less frequent users. Furthermore, the implementation of a loyalty program will offer bonuses to long-term users, making the transition smoother. Community members and token holders are urged to evaluate this balanced proposal."
+    }
+}

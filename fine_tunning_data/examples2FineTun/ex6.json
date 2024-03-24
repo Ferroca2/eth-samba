@@ -1,0 +1,74 @@
+{
+    "initial_propose": {
+        "protocol_description": "VerifyDAO is a decentralized protocol that offers identity verification services. It allows for the secure and private verification of user identities on the blockchain.",
+        "title": "Introduction of Tiered Service Charges for Verification Request",
+        "description": "VerifyDAO currently charges a blanket fee for all verification requests. This proposal suggests implementing a tiered charging system based on the urgency of verification. A premium fee will be charged for rapid verification requests, with normal requests retaining current fees. Income generated could be used to improve service delivery and scale the platform. Careful assessment and inputs are, however, needed from token holders and the community."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "I support this because some users want faster verification and might be willing to pay more for it."
+        },
+        {
+            "id": "2",
+            "comment": "This could lead to stratification of services that may not favor most users."
+        },
+        {
+            "id": "3",
+            "comment": "The extra fee for rapid verification must be spent on improving services for all, not just the ones who can pay more."
+        },
+        {
+            "id": "4",
+            "comment": "Could 'Rapid Verification' cause the normal requests to be slower due to priority shift?"
+        },
+        {
+            "id": "5",
+            "comment": "This may incentivize users to opt for normal requests and wait longer, reducing revenue from the new model."
+        },
+        {
+            "id": "6",
+            "comment": "A detailed cost-benefit analysis is needed before implementing the decision."
+        },
+        {
+            "id": "7",
+            "comment": "We need to understand whether our existing customers value faster verification and how much extra they're willing to pay."
+        },
+        {
+            "id": "8",
+            "comment": "The segregation might result in unfair practices, affecting the user experience."
+        },
+        {
+            "id": "9",
+            "comment": "Might be a good idea to link fee to the complexity of the verification rather than speed."
+        },
+        {
+            "id": "10",
+            "comment": "Could cause dissatisfaction among users who can't afford to pay more for quick verification."
+        },
+        {
+            "id": "11",
+            "comment": "If other platforms offer a similar tiered charging system, there's no harm in trying it."
+        },
+        {
+            "id": "12",
+            "comment": "Before this, can we ensure that the protocol is capable of handling an increased load?"
+        },
+        {
+            "id": "13",
+            "comment": "There's a risk of losing users to competitors if we start charging more for premium services."
+        },
+        {
+            "id": "14",
+            "comment": "We need to consider our brand image and how this could potentially affect it."
+        },
+        {
+            "id": "15",
+            "comment": "We should consider a trial period to assess the impact of such a change."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "VerifyDAO is a decentralized protocol that offers identity verification services. It allows for the secure and private verification of user identities on the blockchain.",
+        "title": "Integration of Value-Based Service Charges for Verification Requests",
+        "description": "In response to the diverse views from the community, a revised proposal is made – a value-based system that links fees to the complexity and speed of verification. This addresses the concern about unfairly prioritizing rapid verifications and potentially slowing normal requests. Instead of only time-based, the complexity level of verification tasks will play a part in fee determination. Such a system, while maintaining profits, aptly aligns users' costs with the value derived. Before its full integration, a pilot phase will be run to assess its impact. In this phase, feedback will be collected and necessary adjustments made. We encourage the platform's community and token holders to deliberate on this improved proposal."
+    }
+}
