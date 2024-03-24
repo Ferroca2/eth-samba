@@ -11,6 +11,7 @@ import { getComments } from './utils/getComments';
 import { getOpenAIResponse } from './utils/openai';
 import { prompt } from './utils/prompt';
 import { pinata } from './utils/ipfs';
+import { CHAIN } from '@prisma/client';
 dotenv.config();
 
 const app = express();
@@ -181,23 +182,30 @@ app.post('/proposal', async (
       },
       select: {
         address: true,
+        chain: true,
       }
     });
 
     if(!protocol) {
       return res.status(404).json({ error: 'Protocol not found' });
     }
+    
 
-    const provider = new ethers.providers.JsonRpcProvider(process.env.PROVIDER);
+    // const provider = new ethers.providers.JsonRpcProvider(
+    //   protocol.chain == CHAIN.NEAR ? process.env.AURORA_PROVIDER : process.env.SCROLL_PROVIDER
+    // );
 
-    // Create a contract instance
-    const contract = new ethers.Contract(process.env.CONTRACT_ADDRESS as string, votingAbi.abi, provider);
+    // // Create a contract instance
+    // const contract = new ethers.Contract(
+    //   protocol.chain == CHAIN.NEAR ? process.env.AURORA_CONTRACT_ADDRESS! : process.env.SCROLL_CONTRACT_ADDRESS!, 
+    //   votingAbi.abi, 
+    //   provider);
 
-    // Call the contract to get the Protocol struct for the given address
-    const object = await contract.protocols(protocol.address);
+    // // Call the contract to get the Protocol struct for the given address
+    // const object = await contract.protocols(protocol.address);
 
     //now + time in seconds
-    const end_time = new Date(Date.now() + object.commentTime * 1000);
+    const end_time = new Date(Date.now());
 
     const proposal = await prisma.proposal.create({
       data: {
@@ -429,6 +437,7 @@ app.post('/settle', async (
           select: {
             description: true,
             address: true,
+            chain: true,
           }
         }
       }
@@ -438,9 +447,15 @@ app.post('/settle', async (
       return res.status(404).json({ error: 'Proposal not found' });
     }
 
-    const provider = new ethers.providers.JsonRpcProvider(process.env.PROVIDER);
+    const provider = new ethers.providers.JsonRpcProvider(
+      proposal.protocol.chain == CHAIN.NEAR ? process.env.AURORA_PROVIDER : process.env.SCROLL_PROVIDER
+    );
 
-    const contract = new ethers.Contract(process.env.CONTRACT_ADDRESS as string, votingAbi.abi, provider);
+    const contract = new ethers.Contract(
+      proposal.protocol.chain == CHAIN.NEAR ? process.env.AURORA_CONTRACT_ADDRESS! : process.env.SCROLL_CONTRACT_ADDRESS!,
+      votingAbi.abi, 
+      provider
+    );
 
 
     const selected_comments = await getComments(proposal_id);
@@ -451,8 +466,6 @@ app.post('/settle', async (
       proposal.description,
       selected_comments,
     ));
-
-    console.log(ai_response);
 
     if (!ai_response) {
       return res.status(400).json({ error: 'Error settling protocol' });

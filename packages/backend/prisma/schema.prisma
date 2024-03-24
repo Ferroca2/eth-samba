@@ -11,10 +11,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum CHAIN{
+  NEAR
+  SCROLL
+}
+
 model Protocol {
-  id            Int          @id
+  id            Int          @id @default(autoincrement())
   title         String       @unique
   address       String
+  chain         CHAIN        @default(NEAR)
   description   String
   image_url     String?
   proposals     Proposal[]
