@@ -7,6 +7,10 @@ import swaggerUi from 'swagger-ui-express';
 import helmet from "helmet";
 import cors from "cors";
 import { ethers } from 'ethers';
+import { getComments } from './utils/getComments';
+import { getOpenAIResponse } from './utils/openai';
+import { prompt } from './utils/prompt';
+import { pinata } from './utils/ipfs';
 dotenv.config();
 
 const app = express();
@@ -63,6 +67,10 @@ app.post('/protocol', async (
                   type: "string",
                   default: "https://example.com/image.png",
                 },
+                description: {
+                  type: "string",
+                  default: "this is a cool protocol",
+                },
               }
             }
           }
@@ -74,6 +82,7 @@ app.post('/protocol', async (
     title, 
     address,
     image_url,
+    description
   } = req.body;
 
   try {
@@ -93,6 +102,7 @@ app.post('/protocol', async (
         title,
         address,
         image_url,
+        description
       }
     });
 
@@ -382,7 +392,93 @@ app.post('/comment', async (
   }
 });
 
+app.post('/settle', async (
+  req: Request, 
+  res: Response
+) => {
+  /* #swagger.tags = ['Proposal']
+    #swagger.description = 'Settle a Proposal' */
 
+  /* #swagger.requestBody = {
+        "@content": { 
+          "application/json": {
+            schema: {
+              type: 'object',
+              proposal_id: {
+                title: {
+                  type: "number",
+                  example: "2"
+                },
+              }
+            }
+          }
+        }
+      }
+  */
+  
+  const { proposal_id } = req.body;
+  try {
+    const proposal = await prisma.proposal.findUnique({
+      where: {
+        id: proposal_id
+      },
+      select: {
+        title: true,
+        description: true,
+        protocol: {
+          select: {
+            description: true,
+            address: true,
+          }
+        }
+      }
+    });
+
+    if (!proposal) {
+      return res.status(404).json({ error: 'Proposal not found' });
+    }
+
+    const provider = new ethers.providers.JsonRpcProvider(process.env.PROVIDER);
+
+    const contract = new ethers.Contract(process.env.CONTRACT_ADDRESS as string, votingAbi.abi, provider);
+
+    const object = await contract.protocols(proposal.protocol.address);
+
+    object.description
+
+    const selected_comments = await getComments(proposal_id);
+
+    const ai_response = await getOpenAIResponse(prompt(
+      proposal.protocol.description,
+      proposal.title,
+      proposal.description,
+      selected_comments,
+    ));
+
+    if (!ai_response) {
+      return res.status(400).json({ error: 'Error settling protocol' });
+    }
+
+    const response = JSON.parse(ai_response);
+
+    if (!response.new_proposal) {
+      return res.status(400).json({ error: 'Error settling protocol' });
+    } 
+    if (!response.description) {
+      return res.status(400).json({ error: 'Error settling protocol' });
+    }
+
+    const ipfs = await pinata.pinJSONToIPFS(response);
+
+    await contract.makeProposal(proposal.protocol.address, response.title, ipfs.IpfsHash);
+
+
+    return res.status(200).json({ response });
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json({ error: 'Error settling protocol' });
+  }
+});
 
 
 app.listen(port, () => {

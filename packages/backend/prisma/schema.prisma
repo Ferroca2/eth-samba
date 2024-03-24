@@ -15,6 +15,7 @@ model Protocol {
   id            Int          @id
   title         String       @unique
   address       String
+  description   String
   image_url     String?
   proposals     Proposal[]
   created_at    DateTime     @default(now())
