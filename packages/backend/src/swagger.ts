@@ -13,7 +13,7 @@ const doc = {
   },
   servers: [
     {
-      url: "http://localhost:8080",
+      url: process.env.HOST || "http://localhost:8080",
     },
   ],
 };
