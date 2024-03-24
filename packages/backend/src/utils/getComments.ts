@@ -1,6 +1,5 @@
 import { prisma } from "./database";
 
-
 export const getComments = async (proposal_id: number, max_amount = 20): Promise<Array<{ id: string, comment: string }>> =>  {
   const comments = await prisma.comment.findMany({
     where: {

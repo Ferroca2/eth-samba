@@ -28,7 +28,6 @@ app.use(express.json({ limit: "10mb" }));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.get('/', async (req, res) => {
-
   res.send('Hello World!');
 });
 
@@ -234,7 +233,8 @@ app.get('/protocol/:protocol_name', async (
       select: {
         id: true,
         title: true,
-        proposals: true
+        proposals: true,
+        image_url: true,
       }
     });
 
@@ -442,9 +442,6 @@ app.post('/settle', async (
 
     const contract = new ethers.Contract(process.env.CONTRACT_ADDRESS as string, votingAbi.abi, provider);
 
-    const object = await contract.protocols(proposal.protocol.address);
-
-    object.description
 
     const selected_comments = await getComments(proposal_id);
 
@@ -455,6 +452,8 @@ app.post('/settle', async (
       selected_comments,
     ));
 
+    console.log(ai_response);
+
     if (!ai_response) {
       return res.status(400).json({ error: 'Error settling protocol' });
     }
@@ -464,14 +463,18 @@ app.post('/settle', async (
     if (!response.new_proposal) {
       return res.status(400).json({ error: 'Error settling protocol' });
     } 
-    if (!response.description) {
+    if (!response.new_proposal.description) {
       return res.status(400).json({ error: 'Error settling protocol' });
     }
 
-    const ipfs = await pinata.pinJSONToIPFS(response);
+    const ipfs = await pinata.pinJSONToIPFS({
+      description: response.new_proposal.description
+    });
 
-    await contract.makeProposal(proposal.protocol.address, response.title, ipfs.IpfsHash);
+    const wallet = new ethers.Wallet(process.env.PRIVATE_KEY as string, provider);
 
+
+    await contract.connect(wallet).makeProposal(proposal.protocol.address, response.new_proposal.title, ipfs.IpfsHash);
 
     return res.status(200).json({ response });
   } catch (error) {

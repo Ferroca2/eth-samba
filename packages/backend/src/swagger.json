@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://eth-samba.onrender.com"
+      "url": "http://localhost:8080"
     }
   ],
   "paths": {
@@ -56,6 +56,10 @@
                   "image_url": {
                     "type": "string",
                     "default": "https://example.com/image.png"
+                  },
+                  "description": {
+                    "type": "string",
+                    "default": "this is a cool protocol"
                   }
                 }
               }
@@ -241,6 +245,40 @@
                   "content": {
                     "type": "string",
                     "default": "This is a comment"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/settle": {
+      "post": {
+        "tags": [
+          "Proposal"
+        ],
+        "description": "Settle a Proposal",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "proposal_id": {
+                  "title": {
+                    "type": "number",
+                    "example": "2"
                   }
                 }
               }
