@@ -496,6 +496,8 @@ app.post('/settle', async (
       },
       data: {
         on_chain: true,
+        title: response.counter_propose.title,
+        description: response.counter_propose.description,
       }
     });
 
