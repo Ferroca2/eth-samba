@@ -504,7 +504,7 @@ app.post('/settle', async (
 
     await contract.connect(wallet).makeProposal(proposal.protocol.address, proposal_id, response.new_proposal.title, ipfs.IpfsHash);
 
-    return res.status(200).json({ response });
+    return res.status(200).json({ ...response.counter_propose });
   } catch (error) {
     console.log(error);
     return res.status(400).json({ error: 'Error settling protocol' });

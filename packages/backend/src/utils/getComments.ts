@@ -32,7 +32,6 @@ export const getComments = async (proposal_id: number, max_amount = 20): Promise
   
       return date;
     } catch (error) {
-      console.error("Error fetching creator info:", error);
       return new Date(Date.now());
     }
   };
