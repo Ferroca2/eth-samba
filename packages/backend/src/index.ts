@@ -477,6 +477,8 @@ app.post('/settle', async (
 
     const response = JSON.parse(ai_response);
 
+    console.log(response);
+
     if (!response.counter_propose) {
       return res.status(400).json({ error: 'Error settling protocol' });
     } 
