@@ -121,7 +121,7 @@
         }
       }
     },
-    "/protocol/{protocol_id}": {
+    "/protocol/{protocol_name}": {
       "get": {
         "tags": [
           "Protocol"
@@ -129,7 +129,7 @@
         "description": "Get info from a protocol",
         "parameters": [
           {
-            "name": "protocol_id",
+            "name": "protocol_name",
             "in": "path",
             "required": true,
             "type": "string"

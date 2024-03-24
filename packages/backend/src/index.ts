@@ -67,7 +67,7 @@ app.post('/protocol', async (
     address,
     image_url,
   } = req.body;
-  
+
   try {
     const existingProtocol = await prisma.protocol.findUnique({
       where: {
@@ -173,19 +173,19 @@ app.post('/proposal', async (
   }
 });
 
-app.get('/protocol/:protocol_id', async (
+app.get('/protocol/:protocol_name', async (
   req: Request,
   res: Response,
 ) => {
   /* #swagger.tags = ['Protocol']
     #swagger.description = 'Get info from a protocol' */
 
-  const { protocol_id } = req.params;
+  const { protocol_name } = req.params;
     
   try {
     const proposals = await prisma.protocol.findMany({
       where: {
-        id: parseInt(protocol_id as string),
+        title: protocol_name,
       },
       select: {
         id: true,
