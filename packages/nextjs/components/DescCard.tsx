@@ -14,6 +14,14 @@ export const DescCard: React.FC<DescCardProps> = ({ logo, name, members }) => {
   const { resolvedTheme } = useTheme();
   const isDarkMode = resolvedTheme === "dark";
 
+  const openLink = () => {
+    window.open(
+      "https://api.openai.com/v1/files/file-SOIwYVTqp3X9ROHOILXxD1Wu/content",
+      "_blank",
+      "noopener,noreferrer",
+    );
+  };
+
   return (
     <div
       onClick={() => router.push(`/protocol/${name}`)}
@@ -42,10 +50,10 @@ export const DescCard: React.FC<DescCardProps> = ({ logo, name, members }) => {
               Join
             </button>
             <button
-              onClick={() => router.push(`/protocol/${name}/form`)}
+              onClick={openLink}
               className="w-50 px-4 py-2 my-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-full active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
             >
-              Create Proposal
+              See dataset
             </button>
           </div>
         ) : (
@@ -54,10 +62,10 @@ export const DescCard: React.FC<DescCardProps> = ({ logo, name, members }) => {
               Join
             </button>
             <button
-              onClick={() => router.push(`/protocol/${name}/form`)}
+              onClick={openLink}
               className="w-50 px-4 py-2 my-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-full active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
             >
-              Create Proposal
+              See dataset
             </button>
           </div>
         )}
