@@ -127,6 +127,7 @@ app.get('/protocol', async (
         title: true,
         address: true,
         image_url: true,
+        chain: true,
       }
     });
 
@@ -243,6 +244,7 @@ app.get('/protocol/:protocol_name', async (
         title: true,
         proposals: true,
         image_url: true,
+        chain: true,
       }
     });
 
