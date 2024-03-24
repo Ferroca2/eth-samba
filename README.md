@@ -44,27 +44,34 @@ Make sure you have the following installed:
 
 ## Getting Started
 ### Front-end 
-1. `cd frontend`
-2. `npm install`
-3. Set the envoriment variables `NEXT_PUBLIC_CHAIN_ID`, `WEB3_HOST_PROVIDER`
-4. npm run dev
+1. `yarn install`
+3. Set the envoriment variables for the frontend.
+2. `yarn start`
 ### Back-end 
-1. `cd backend`
+1. `cd ./packages/backend`
 2. `npm install`
-3. Set the envoriment variables that connect to the cloudinary database and openAi API, `OPENAI_API_KEY`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`.
-4. `node index`
+3. Set the envoriment variables from the `.env.template`.
+4. `npm run dev`
 ### Contracts
-1. `cd contracts`
-2. `npm install`
-3. Set your the DEPLOY_INFURA_KEY and PRIVATE_KEY variables
-4. `npx hardhat run --network aurora ./scripts/deployAurora.ts`
-5. `npx hardhat run --network mumbai ./scripts/deployMumbai.ts`
+1. `yarn install`
+2. Set the envoriment variables from the `.env.template` in `./packages/hardhat`
+3. `yarn deploy --network auroraSepolia`
+4. `yarn deploy --network scrollSepolia`
 
 
 ## Usage
 1. **Wallet Connection:** Start by connecting your wallet to SlothGov to engage with the platform.
 2. **Proposal Interaction:** Depending on the governance configuration, engage with proposals either by initiating them or providing feedback.
 3. **Vote and Audit:** Participate in the voting process and, post-implementation, contribute to the community audit to ensure transparency and accountability.
+
+## Chains
+1. Aurora(NEAR): [0xFd06Fb0cc7CeDfD2D8D1b5fd63354C039AA06a8b](https://explorer.testnet.aurora.dev/address/0xFd06Fb0cc7CeDfD2D8D1b5fd63354C039AA06a8b)
+2. Scroll: [0x3a488ADBc680199545Eadc72F77BA2B5C718fC71](https://sepolia.scrollscan.com/address/0x3a488ADBc680199545Eadc72F77BA2B5C718fC71)
+
+## Deployed apps:
+Frontend: https://eth-samba-fkn6mq99r-ferroca2s-projects.vercel.app
+Backend: https://eth-samba.onrender.com
+Backend Api Doc: https://eth-samba.onrender.com/api-docs
 
 
 ## Team:
