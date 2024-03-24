@@ -1,0 +1,78 @@
+{
+    "initial_propose": {
+        "protocol_description": "ArtDigi is a decentralized digital art marketplace that enables artists to mint, auction, and sell their digital art as non-fungible tokens. Leveraging blockchain technology, it ensures the provenance and rightful ownership of digital art pieces.",
+        "title": "Inclusion of Art Curation Panel for Quality Control",
+        "description": "Presently, ArtDigi allows any and all artists to mint and list their NFTs without oversight. This proposal suggests the establishment of an Art Curation Panel that will assess and approve artworks before they are minted as NFTs. This panel aims to maintain a high level of artwork quality and preserve the platform's reputation for quality NFTs. As this change will impact creators' power to mint freely and potentially the variety of artworks on our platform, it urges discussion and feedback from the community and token holders."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "Approval by an Art Curation Panel could potentially increase the value of the NFTs on ArtDigi."
+        },
+        {
+            "id": "2",
+            "comment": "The democratization of art is one of the biggest draws of the NFT space. This proposal could hamper that."
+        },
+        {
+            "id": "3",
+            "comment": "Who will be chosen for the Art Curation Panel? They could greatly influence the direction of ArtDigi's market."
+        },
+        {
+            "id": "4",
+            "comment": "This could discourage new and experimental artists from joining our platform."
+        },
+        {
+            "id": "5",
+            "comment": "The panel ensures that art of a certain standard is listed, preventing the listing of poor-quality art."
+        },
+        {
+            "id": "6",
+            "comment": "Could the Curation Panel's decisions lead to a biased or narrow selection of art?"
+        },
+        {
+            "id": "7",
+            "comment": "Why not let the users decide what art they think is valuable or not?"
+        },
+        {
+            "id": "8",
+            "comment": "Art is subjective. What may be 'low quality' to the panel could be 'unique' to others."
+        },
+        {
+            "id": "9",
+            "comment": "I'd prefer if artists can decide to voluntarily submit their work for curation, not make it mandatory."
+        },
+        {
+            "id": "10",
+            "comment": "Art curation could influence collectors and affect the perceived value of the NFTs."
+        },
+        {
+            "id": "11",
+            "comment": "Let's keep the platform open for diversity and experimentation in art."
+        },
+        {
+            "id": "12",
+            "comment": "Maybe the curation could be a feature for premium artists who want it?"
+        },
+        {
+            "id": "13",
+            "comment": "The internet already has gatekeepers, let's not bring that culture here."
+        },
+        {
+            "id": "14",
+            "comment": "The curation panel should also include members voted in by the community, not just chosen by the platform."
+        },
+        {
+            "id": "15",
+            "comment": "Require artists to provide a detailed description or a statement with their work for context and understanding."
+        },
+        {
+            "id": "16",
+            "comment": "We should not forget ArtDigi's goal to empower artists and maintain a vibrant, diverse art community."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "ArtDigi is a decentralized digital art marketplace that enables artists to mint, auction, and sell their digital art as non-fungible tokens. Leveraging blockchain technology, it ensures the provenance and rightful ownership of digital art pieces.",
+        "title": "Voluntary Art Curation for Quality Control and Optional Accreditation",
+        "description": "Taking into account the community's concern over the inclusivity and openness of our platform, the counter-proposal recommends for a voluntary curation. Artists who want their NFTs listed with an accredited tag can submit their work for curation. It ensures quality control without hampering the democratization of art. Importantly, part of the curation panel will be elected by the community, ensuring a fair representation. We believe this change will strengthen the value of the accredited NFTs and empower artists. Token holders and community members are encouraged to discuss this revised proposal."
+    }
+}

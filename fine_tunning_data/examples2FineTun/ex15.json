@@ -1,0 +1,90 @@
+{
+    "initial_propose": {
+        "protocol_description": "PropBlock is a blockchain-based, decentralized real estate platform that allows for transparent, reliable and swift transactions. It simplifies property exchange by eliminating the need for intermediaries.",
+        "title": "Introduction of a Property Verification Team",
+        "description": "Currently, PropBlock allows anyone to list properties, resulting in multiple cases of fraudulent listings. This proposal suggests the formation of a Property Verification Team. The team's role would be to verify the property documents and the rights of the lister to sell or lease the property. Implementation of this plan will help reduce fraud and increase the reliability of property listings on PropBlock. Considering the possible impact on the time-to-list and user experience, this proposal invites the community and token holders to give their feedback."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "As a property seeker, I would greatly appreciate knowing that all listed properties have been properly verified."
+        },
+        {
+            "id": "2",
+            "comment": "While I agree that the platform needs to be safer, wouldn't the verification process severely slow down property listing timings?"
+        },
+        {
+            "id": "3",
+            "comment": "Who will have the power to select the members of the Property Verification Team?"
+        },
+        {
+            "id": "4",
+            "comment": "I think PropBlock should remain as a completely open and unrestricted listing platform."
+        },
+        {
+            "id": "5",
+            "comment": "A Property Verification Team might lead to centralized control, which goes against our platform's values."
+        },
+        {
+            "id": "6",
+            "comment": "How about implementing a reputation system for frequent listers instead of a verification system for every property?"
+        },
+        {
+            "id": "7",
+            "comment": "Shouldn't this verification be automatically done through smart contracts?"
+        },
+        {
+            "id": "8",
+            "comment": "It would be good if we have local verifiers who understand specific regional property laws better."
+        },
+        {
+            "id": "9",
+            "comment": "We need a mechanism so that the Property Verification Team's decisions can be audited and contested if necessary."
+        },
+        {
+            "id": "10",
+            "comment": "What criteria will the team use to verify a property and the lister's right to sell or lease it?"
+        },
+        {
+            "id": "11",
+            "comment": "If implemented, this could significantly lower the risk of property disputes and potential legal troubles."
+        },
+        {
+            "id": "12",
+            "comment": "This solution seems to add unnecessary complexity and could turn off users looking for a fast and simple process."
+        },
+        {
+            "id": "13",
+            "comment": "Do the benefits of reducing fraud outweigh the costs of this new verification system?"
+        },
+        {
+            "id": "14",
+            "comment": "Listing frequency should play a role in the verification. Long-term, reliable listers should face less hurdles."
+        },
+        {
+            "id": "15",
+            "comment": "Can we ensure this doesn't become a pay-to-pass system favoring wealthier or larger listers?"
+        },
+        {
+            "id": "16",
+            "comment": "Strict verification may discourage some, but it'll attract serious and genuine users who value transparency and security."
+        },
+        {
+            "id": "17",
+            "comment": "We need to keep the user experience as smooth as possible while implementing any new process."
+        },
+        {
+            "id": "18",
+            "comment": "Favoring the listing speed over the reliability could damage our platform’s credibility in the long term."
+        },
+        {
+            "id": "19",
+            "comment": "While verification is necessary, we should also focus on user awareness about property frauds in the crypto space."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "PropBlock is a blockchain-based, decentralized real estate platform that allows for transparent, reliable and swift transactions. It simplifies property exchange by eliminating the need for intermediaries.",
+        "title": "Introduction of an Opt-In Verification for Enhanced Property Listing Credibility",
+        "description": "Reflecting the wide spectrum of community's views, the counterproposal recommends a voluntary, opt-in property verification process. This allows listers to choose whether they want their properties to be verified, thus certifying their listings. Additionally, a reputation system will be in place for frequent listers to streamline the process further. To assure fairness, the community will have input on the selection of the Property Verification Team. This ensures efficient functionality without compromising the platform's decentralized ethos. As always, the community and token holders are encouraged to share their perspectives."
+    }
+}

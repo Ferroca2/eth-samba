@@ -1,0 +1,82 @@
+{
+    "initial_propose": {
+        "protocol_description": "GameNet is a decentralized gaming protocol that enables players to truly own and control their in-game assets. By building games on the blockchain, GameNet aims to democratize the virtual gaming world.",
+        "title": "Introduction of an Asset Aging Mechanism",
+        "description": "Presently, in-game assets on GameNet do not depreciate in value or 'age'. However, the introduction of an asset aging mechanism could add realism to games and balance gameplay by gradually reducing the effectiveness of an asset over time. This would incentivise continued participation and promote a dynamic asset market. As significant change to the gaming economy, the proposal invites detailed discussion and feedback from the gaming community and token holders."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "I like the idea of an aging mechanism. It adds another layer of strategy to gameplay."
+        },
+        {
+            "id": "2",
+            "comment": "Wouldn't asset aging discourage players from investing in high-value assets?"
+        },
+        {
+            "id": "3",
+            "comment": "What determines how fast an asset ages? Is it based on real-time or gameplay time?"
+        },
+        {
+            "id": "4",
+            "comment": "Will there be a way to repair or rejuvenate aged assets?"
+        },
+        {
+            "id": "5",
+            "comment": "In my opinion, the aging of assets could discourage casual players."
+        },
+        {
+            "id": "6",
+            "comment": "An asset aging mechanism might lead to more frequent trading, increasing the fluidity of the asset market."
+        },
+        {
+            "id": "7",
+            "comment": "What fix have we considered to avoid players exploiting the system and easily replacing aging assets with new ones?"
+        },
+        {
+            "id": "8",
+            "comment": "This proposal, though interesting, might overcomplicate gameplay."
+        },
+        {
+            "id": "9",
+            "comment": "Asset aging could provide veteran players with an added challenge."
+        },
+        {
+            "id": "10",
+            "comment": "If we implement this, we need a transparent way to show players the aging status of their assets."
+        },
+        {
+            "id": "11",
+            "comment": "I worry this might increase income inequality among players."
+        },
+        {
+            "id": "12",
+            "comment": "We should ponder if adding realism is necessary. After all, it's a virtual game we're talking about."
+        },
+        {
+            "id": "13",
+            "comment": "An asset aging mechanism could incentivize cooperation and trading among players."
+        },
+        {
+            "id": "14",
+            "comment": "We must carefully consider the speed of aging. Too fast, and players might find gameplay frustrating."
+        },
+        {
+            "id": "15",
+            "comment": "This seems like an exciting fix but might end up favoring players who can afford to replace aging assets."
+        },
+        {
+            "id": "16",
+            "comment": "We can implement asset renewal as a new goal for players to achieve."
+        },
+        {
+            "id": "17",
+            "comment": "Shouldn't the community vote for such a drastic change in the game's mechanics?"
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "GameNet is a decentralized gaming protocol that enables players to truly own and control their in-game assets. By building games on the blockchain, GameNet aims to democratize the virtual gaming world.",
+        "title": "Introduction of an Opt-In Asset Aging Mechanism With Renewal Options",
+        "description": "Considering community feedback, the counterproposal suggests introducing an opt-in asset aging mechanism, allowing players to choose if they want their assets to age. Additionally, a companion feature allowing the rejuvenation or repair of aged assets offers a new layer to gameplay. This hybrid approach maintains the game's appeal to both casual and veteran players, encouraging continued participation and dynamic asset trading while preserving player's investment. As always, the community and token holders are invited to discuss the revised proposal."
+    }
+}

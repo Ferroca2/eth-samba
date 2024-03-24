@@ -1,0 +1,78 @@
+{
+    "initial_propose": {
+        "protocol_description": "SocialDApp is a decentralized social media platform allowing users to share and consume content, build communities, and interact through a transparent and privacy-focused environment. Its ad-free ethos simultaneously empowers users and champions individual privacy.",
+        "title": "Incorporation of AI Moderation to Tackle Online Abuse",
+        "description": "Due to the increase in cases of online abuse and hate speech on SocialDApp, this proposal introduces AI (Artificial Intelligence) moderation. A machine learning-based system could scan and flag potentially harmful content for review. This auto-moderation feature would allow us to maintain a respectful and inclusive environment. However, considering the possibilities of false positives and the potential stifling of free speech, it encourages community and token holders to share their views."
+    },
+    "comments": [
+        {
+            "id": "1",
+            "comment": "As an avid user, I believe AI moderation can help maintain cordial communication on SocialDApp."
+        },
+        {
+            "id": "2",
+            "comment": "Wouldn't algorithms deciding what's acceptable or not raise issues about freedom of speech?"
+        },
+        {
+            "id": "3",
+            "comment": "AI moderation might filter out false positive comments. That could harm healthy discussions."
+        },
+        {
+            "id": "4",
+            "comment": "No algorithm is perfect. It might censor meaningful content if it targets certain keywords."
+        },
+        {
+            "id": "5",
+            "comment": "The balance between maintaining a healthy community and upholding the right to freedom of speech is delicate."
+        },
+        {
+            "id": "6",
+            "comment": "The AI system could be trained and improved over time. It's important not to undermine its potential."
+        },
+        {
+            "id": "7",
+            "comment": "We need to understand that moderation isn't about censorship, but envisaging a hate-free platform."
+        },
+        {
+            "id": "8",
+            "comment": "How would the platform ensure the AI system doesn't incline towards any bias?"
+        },
+        {
+            "id": "9",
+            "comment": "We should consider incorporating user input to make the AI system more accountable and transparent."
+        },
+        {
+            "id": "10",
+            "comment": "Could the flagged content be reviewed by community moderators before final decision?"
+        },
+        {
+            "id": "11",
+            "comment": "I think AI could certainly help, but human moderation should be the last line of defense."
+        },
+        {
+            "id": "12",
+            "comment": "We need to ensure the implementation of AI doesn't violate the privacy of users."
+        },
+        {
+            "id": "13",
+            "comment": "A well-trained AI might be more objective in detecting harmful content than human moderators."
+        },
+        {
+            "id": "14",
+            "comment": "If the AI system fails, it might cause loss of trust in SocialDApp's ability to ensure a safe community."
+        },
+        {
+            "id": "15",
+            "comment": "Could users be given a chance to contest or challenge the decision made by AI moderation?"
+        },
+        {
+            "id": "16",
+            "comment": "Integrating AI moderation with community input could lead to a more resilient and adaptable moderation system."
+        }
+    ],
+    "counter_propose": {
+        "protocol_description": "SocialDApp is a decentralized social media platform allowing users to share and consume content, build communities, and interact through a transparent and privacy-focused environment. Its ad-free ethos simultaneously empowers users and champions individual privacy.",
+        "title": "Integration of AI-Assisted Community Moderation for Healthy Interaction",
+        "description": "Given the surfaced concerns around potential bias, free speech, and false positives, the modified proposal suggests an AI-assisted community moderation system. The AI moderation would flag potentially abusive content, which would then be reviewed by community moderators before any action. Users could challenge the decisions, promoting transparency, and fairness. This combined human-AI approach could provide a robust solution to ensure a respectful and inclusive environment while respecting user privacy. Community and token holders are urged to share insights on this proposed amendment."
+    }
+}
