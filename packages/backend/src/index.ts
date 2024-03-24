@@ -272,6 +272,8 @@ app.get('/proposal/:proposal_id', async (
         protocol_id: true,
         title: true,
         description: true,
+        creator: true,
+        created_at: true,
         comments: {
           select: {
             id: true,
