@@ -1,0 +1,223 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Backend API",
+    "version": "1.0.0",
+    "description": "Backend API"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/protocol": {
+      "post": {
+        "tags": [
+          "Protocol"
+        ],
+        "description": "Create a Protocol",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number",
+                    "example": "2"
+                  },
+                  "title": {
+                    "type": "string",
+                    "default": "My Protocol"
+                  },
+                  "address": {
+                    "type": "string",
+                    "default": "0x1234567890123456789012345678901234567890"
+                  },
+                  "image_url": {
+                    "type": "string",
+                    "default": "https://example.com/image.png"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Protocol"
+        ],
+        "description": "Get all Protocols",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/proposal": {
+      "post": {
+        "tags": [
+          "Proposal"
+        ],
+        "description": "Create a Proposal",
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "protocol_id": {
+                    "type": "number",
+                    "example": "2"
+                  },
+                  "title": {
+                    "type": "string",
+                    "default": "My Proposal"
+                  },
+                  "creator": {
+                    "type": "string",
+                    "default": "0x1234567890123456789012345678901234567890"
+                  },
+                  "description": {
+                    "type": "string",
+                    "default": "ipfs://QmXyZ"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Proposal"
+        ],
+        "description": "Get all Proposals",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/proposal/{proposal_id}": {
+      "get": {
+        "tags": [
+          "Proposal"
+        ],
+        "description": "Get a Proposal by ID",
+        "parameters": [
+          {
+            "name": "proposal_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/like": {
+      "post": {
+        "tags": [
+          "Like"
+        ],
+        "description": "Create a Like",
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "comment_id": {
+                    "type": "number",
+                    "example": "2"
+                  },
+                  "address": {
+                    "type": "string",
+                    "default": "0x1234567890123456789012345678901234567890"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/like/{id}": {
+      "delete": {
+        "tags": [
+          "Like"
+        ],
+        "description": "Delete a Like",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "comment_id": {
+                    "type": "number",
+                    "example": "2"
+                  },
+                  "address": {
+                    "type": "string",
+                    "default": "0x1234567890123456789012345678901234567890"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
