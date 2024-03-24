@@ -10,6 +10,7 @@ type PageProps = {
   params: { protocol: string };
 };
 interface CardProps {
+  id: string;
   title: string;
   author: string;
   createdDate: string;
@@ -26,30 +27,35 @@ const ProtocolPage: React.FC<PageProps> = ({ params }) => {
   const router = useRouter();
   const cards: CardProps[] = [
     {
+      id: "1",
       title: "[ARFC] GHO Stewards + Borrow Rate Update",
       author: "@karpatkey_TokenLogic + @ACI + @ChaosLabs",
       createdDate: "2024-03-13",
       status: "Active",
     },
     {
+      id: "2",
       title: "[ARFC] GHO Stewards + Borrow Rate Update",
       author: "@karpatkey_TokenLogic + @ACI + @ChaosLabs",
       createdDate: "2024-03-13",
       status: "Active",
     },
     {
+      id: "3",
       title: "[ARFC] GHO Stewards + Borrow Rate Update",
       author: "@karpatkey_TokenLogic + @ACI + @ChaosLabs",
       createdDate: "2024-03-13",
       status: "Active",
     },
     {
+      id: "4",
       title: "[ARFC] GHO Stewards + Borrow Rate Update",
       author: "@karpatkey_TokenLogic + @ACI + @ChaosLabs",
       createdDate: "2024-03-13",
       status: "Active",
     },
     {
+      id: "5",
       title: "[ARFC] GHO Stewards + Borrow Rate Update",
       author: "@karpatkey_TokenLogic + @ACI + @ChaosLabs",
       createdDate: "2024-03-13",
@@ -71,7 +77,8 @@ const ProtocolPage: React.FC<PageProps> = ({ params }) => {
         <div>
           {cards.map((card, index) => (
             <ProposalCard
-              key={index} // Using index as key is not recommended for dynamic lists
+              key={index}
+              id={card.id}
               title={card.title}
               author={card.author}
               createdDate={card.createdDate}

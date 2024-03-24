@@ -1,20 +1,26 @@
 // components/Card.tsx
 import React from "react";
+import { useRouter } from "next/navigation";
 import { useAccount } from "wagmi";
 import { Address } from "~~/components/scaffold-eth";
 
 interface CardProps {
+  id: string;
   title: string;
   author: string;
   createdDate: string;
   status: "Active" | "Inactive";
 }
 
-export const ProposalCard: React.FC<CardProps> = ({ title, author, createdDate, status }) => {
+export const ProposalCard: React.FC<CardProps> = ({ id, title, author, createdDate, status }) => {
   const { address: connectedAddress } = useAccount();
+  const router = useRouter();
 
   return (
-    <div className="max-w-3xl rounded-lg overflow-hidden shadow-lg bg-base-100 p-4 mb-4">
+    <div
+      onClick={() => router.push(`/proposal/${id}`)}
+      className="max-w-3xl rounded-lg overflow-hidden shadow-md bg-base-100 p-4 mb-4 transition-shadow duration-300 ease-in-out hover:shadow-lg cursor-pointer"
+    >
       <div className="flex-col items-center mb-4">
         <div className="flex justify-between items-center p-4">
           <div className="flex-shrink-0">
