@@ -234,7 +234,7 @@ app.get('/protocol/:protocol_name', async (
   const { protocol_name } = req.params;
     
   try {
-    const proposals = await prisma.protocol.findMany({
+    const proposals = await prisma.protocol.findUnique({
       where: {
         title: protocol_name,
       },
@@ -473,18 +473,27 @@ app.post('/settle', async (
 
     const response = JSON.parse(ai_response);
 
-    if (!response.new_proposal) {
+    if (!response.counter_propose) {
       return res.status(400).json({ error: 'Error settling protocol' });
     } 
-    if (!response.new_proposal.description) {
+    if (!response.counter_propose.description) {
       return res.status(400).json({ error: 'Error settling protocol' });
     }
 
     const ipfs = await pinata.pinJSONToIPFS({
-      description: response.new_proposal.description
+      description: response.counter_propose.description
     });
 
     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY as string, provider);
+
+    await prisma.proposal.update({
+      where: {
+        id: proposal_id
+      },
+      data: {
+        on_chain: true,
+      }
+    });
 
 
     await contract.connect(wallet).makeProposal(proposal.protocol.address, response.new_proposal.title, ipfs.IpfsHash);
