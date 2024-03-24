@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "npm run swagger-autogen && ts-node-dev --respawn --transpile-only src/index.ts",
+    "watch": "nodemon -e ts -w ./ -x npm run dev",
+    "swagger-autogen": "ts-node src/swagger.ts && sed '2d' src/swagger.json > src/swagger.json2 && rm src/swagger.json && mv src/swagger.json2 src/swagger.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pinata/sdk": "^2.1.0",
+    "@prisma/client": "^4.16.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ethers": "^5.7.2",
+    "express": "^4.19.1",
+    "helmet": "^7.1.0",
+    "nodemon": "^3.1.0",
+    "openai": "^4.29.2",
+    "prisma": "^4.16.2",
+    "swagger-autogen": "^2.23.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "@types/swagger-ui-express": "^4.1.6",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.3"
+  }
+}

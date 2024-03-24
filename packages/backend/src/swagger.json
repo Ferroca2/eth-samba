@@ -1,0 +1,291 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Backend API",
+    "version": "1.0.0",
+    "description": "Backend API"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/protocol": {
+      "post": {
+        "tags": [
+          "Protocol"
+        ],
+        "description": "Create a Protocol",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number",
+                    "example": "2"
+                  },
+                  "title": {
+                    "type": "string",
+                    "default": "My Protocol"
+                  },
+                  "address": {
+                    "type": "string",
+                    "default": "0x1234567890123456789012345678901234567890"
+                  },
+                  "image_url": {
+                    "type": "string",
+                    "default": "https://example.com/image.png"
+                  },
+                  "description": {
+                    "type": "string",
+                    "default": "this is a cool protocol"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Protocol"
+        ],
+        "description": "Get all Protocols",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/proposal": {
+      "post": {
+        "tags": [
+          "Proposal"
+        ],
+        "description": "Create a Proposal",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "protocol_id": {
+                    "type": "number",
+                    "example": "2"
+                  },
+                  "title": {
+                    "type": "string",
+                    "default": "My Proposal"
+                  },
+                  "creator": {
+                    "type": "string",
+                    "default": "0x1234567890123456789012345678901234567890"
+                  },
+                  "description": {
+                    "type": "string",
+                    "default": "ipfs://QmXyZ"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/protocol/{protocol_name}": {
+      "get": {
+        "tags": [
+          "Protocol"
+        ],
+        "description": "Get info from a protocol",
+        "parameters": [
+          {
+            "name": "protocol_name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/proposal/{proposal_id}": {
+      "get": {
+        "tags": [
+          "Proposal"
+        ],
+        "description": "Get a Proposal by ID",
+        "parameters": [
+          {
+            "name": "proposal_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/like": {
+      "post": {
+        "tags": [
+          "Like"
+        ],
+        "description": "Create a Like",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "comment_id": {
+                    "type": "number",
+                    "example": "2"
+                  },
+                  "address": {
+                    "type": "string",
+                    "default": "0x1234567890123456789012345678901234567890"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/comment": {
+      "post": {
+        "tags": [
+          "Comment"
+        ],
+        "description": "Create a Comment",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "proposal_id": {
+                    "type": "number",
+                    "example": "2"
+                  },
+                  "creator": {
+                    "type": "string",
+                    "default": "0x1234567890123456789012345678901234567890"
+                  },
+                  "content": {
+                    "type": "string",
+                    "default": "This is a comment"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/settle": {
+      "post": {
+        "tags": [
+          "Proposal"
+        ],
+        "description": "Settle a Proposal",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "proposal_id": {
+                  "title": {
+                    "type": "number",
+                    "example": "2"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
