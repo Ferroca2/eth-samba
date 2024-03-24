@@ -30,6 +30,14 @@ const CreateProposal: React.FC<PageProps> = ({ params }) => {
     setForm({ ...form, [name]: value });
   };
 
+  function waitTwoSeconds() {
+    return new Promise<void>(resolve => {
+      setTimeout(() => {
+        resolve();
+      }, 2000); // 2000 milliseconds = 2 seconds
+    });
+  }
+
   const handleSubmit = async () => {
     setLoading(true);
     const response = await axios.post("https://eth-samba.onrender.com/proposal", {
@@ -38,6 +46,7 @@ const CreateProposal: React.FC<PageProps> = ({ params }) => {
       description: form.description,
       title: form.title,
     });
+    await waitTwoSeconds();
     console.log(response.data);
     setLoading(false);
     setForm({ title: "", description: "", discussionLink: "" });
@@ -46,7 +55,7 @@ const CreateProposal: React.FC<PageProps> = ({ params }) => {
   return (
     <div className="bg-base-300 min-h-screen flex justify-center p-4">
       <div className="max-w-lg w-full bg-base-100 p-4 rounded-lg h-[28rem]">
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form className="space-y-4">
           <div>
             <h1 className="font-bold text-lg">Create Proposal</h1>
             <label htmlFor="title" className="block text-md font-medium">
