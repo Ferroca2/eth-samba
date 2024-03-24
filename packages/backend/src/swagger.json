@@ -21,6 +21,16 @@
         }
       }
     },
+    "/test": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/protocol": {
       "post": {
         "tags": [
