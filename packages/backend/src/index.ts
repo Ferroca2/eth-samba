@@ -6,7 +6,6 @@ import swaggerDocument from "./swagger.json";
 import swaggerUi from 'swagger-ui-express';
 import helmet from "helmet";
 import cors from "cors";
-import { getOpenAIResponse } from './utils/openai';
 import { ethers } from 'ethers';
 dotenv.config();
 
@@ -382,6 +381,8 @@ app.post('/comment', async (
     return res.status(400).json({ error: 'Error creating comment' });
   }
 });
+
+
 
 
 app.listen(port, () => {
