@@ -6,7 +6,8 @@ import { useAccount } from "wagmi";
 import { Divider } from "~~/components/Divider";
 import { Spinner } from "~~/components/Spinner";
 import { Address } from "~~/components/scaffold-eth";
-import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
+import { useScaffoldContract } from "~~/hooks/scaffold-eth";
+import { useWalletClient } from "wagmi";
 
 type PageProps = {
   params: { id: string };
@@ -29,6 +30,11 @@ interface CardProps {
   comments: Comment[];
 }
 
+interface Feedback {
+  title: string;
+  description: string;
+}
+
 async function getData(id: string) {
   let proposal = [];
 
@@ -46,6 +52,33 @@ async function getData(id: string) {
   return proposal as CardProps;
 }
 
+async function getFeedback(id: string) {
+  let proposal = [];
+
+  try {
+    // Perform a GET request using Axios
+    const response = await axios.post(`https://eth-samba.onrender.com/settle`, {
+      proposal_id: parseInt(id),
+    });
+    proposal = response.data; // The data is available in the `data` property
+  } catch (error) {
+    // Handle the error accordingly
+    console.error("Failed to fetch proposal", error);
+    // You might want to pass an error message as a prop and display it in the UI
+  }
+
+  // Pass data to the page via props
+  return proposal as Feedback;
+}
+
+function waitTwoSeconds() {
+  return new Promise<void>(resolve => {
+    setTimeout(() => {
+      resolve();
+    }, 2000); // 2000 milliseconds = 2 seconds
+  });
+}
+
 async function createComment(id: number, creator: string, content: string) {
   try {
     // Perform a POST request using Axios
@@ -54,6 +87,8 @@ async function createComment(id: number, creator: string, content: string) {
       creator,
       content,
     });
+
+    await waitTwoSeconds();
   } catch (error) {
     // Handle the error accordingly
     console.error("Failed to create comment", error);
@@ -65,43 +100,51 @@ async function createComment(id: number, creator: string, content: string) {
 const ProtocolPage: React.FC<PageProps> = ({ params }) => {
   const { address: connectedAddress } = useAccount();
   const [proposal, setData] = useState<CardProps>();
-  const [isLoadingg, setLoading] = useState(true);
+  const [newProposal, setNewProposal] = useState<Feedback>();
+  const [isLoadingg, setLoadingg] = useState(true);
+  const [isLoading, setLoading] = useState(false);
   const [comment, setComment] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isCommenting, setIsCommenting] = useState(true);
   const openDialog = () => setIsDialogOpen(true);
   const closeDialog = () => setIsDialogOpen(false);
   const [selectedOption, setSelectedOption] = useState("");
+  const { data: walletClient } = useWalletClient();
+  const { data: yourContract } = useScaffoldContract({
+    contractName: "Voting",
+    walletClient,
+  });
+
+  const setGreeting = async () => {
+    await yourContract?.write.voteForProposal([
+      BigInt(params.id),
+      selectedOption === "YES" ? 0 : selectedOption === "ABSTAIN" ? 1 : 2,
+    ]);
+};
 
   const closeComments = () => {
-    setIsCommenting(false);
-    openDialog();
+    setLoading(true);
+    getFeedback(params.id).then((data: Feedback) => {
+      setNewProposal(data);
+      setLoading(false);
+      setIsCommenting(false);
+      openDialog();
+    });
   };
-
-  const { writeAsync, isMining } = useScaffoldContractWrite({
-    contractName: "Voting",
-    functionName: "voteForProposal",
-    args: [params.id, selectedOption === "YAE" ? 0 : selectedOption === "ABSTAIN" ? 1 : 2],
-    blockConfirmations: 1,
-    onBlockConfirmation: (txnReceipt: { blockHash: any; }) => {
-      console.log("Transaction blockHash", txnReceipt.blockHash);
-    },
-  });
 
   useEffect(() => {
     getData(params.id).then((data: CardProps) => {
       setData(data);
-      setLoading(false);
+      setLoadingg(false);
     });
   }, [params.id, proposal?.comments]);
 
   const commentt = async () => {
-    if (params.id && connectedAddress) {
-      await createComment(parseInt(params.id), connectedAddress, comment);
-    }
+    await createComment(parseInt(params.id), connectedAddress! , comment);
+
     getData(params.id).then((data: CardProps) => {
       setData(data);
-      setLoading(false);
+      setLoadingg(false);
     });
   };
 
@@ -150,7 +193,7 @@ const ProtocolPage: React.FC<PageProps> = ({ params }) => {
             </button>
           </form>
           <button className="px-4 py-2 bg-blue-500 text-white rounded-full w-full" onClick={closeComments}>
-            Close comments
+            {isLoading ? "Loading..." : "Close comments"}
           </button>
         </div>
       ) : (
@@ -158,7 +201,7 @@ const ProtocolPage: React.FC<PageProps> = ({ params }) => {
           <h1 className="text-4xl font-bold mt-4">Vote</h1>
           <Divider />
           <div className="space-y-2">
-            {["YAE", "NAY", "ABSTAIN"].map((option) => (
+            {["YES", "NO", "ABSTAIN"].map((option) => (
               <button
                 key={option}
                 className={`py-2 px-4 w-full text-left rounded-full flex justify-between items-center
@@ -176,10 +219,10 @@ const ProtocolPage: React.FC<PageProps> = ({ params }) => {
             ))}
           </div>
           <button
-            onClick={() => writeAsync()}
+            onClick={setGreeting}
             className="mt-4 bg-blue-500 text-white py-2 px-4 w-full rounded-full focus:outline-none hover:bg-blue-600"
           >
-            {isMining ? "Loading..." : "Vote"}
+            {"Vote"}
           </button>
         </div>
       )}
@@ -195,14 +238,14 @@ const ProtocolPage: React.FC<PageProps> = ({ params }) => {
                 <span className={`text-sm font-semibold py-1 px-3 rounded-full bg-green-200 text-green-700`}>
                   Active
                 </span>
-                <h1 className="text-4xl font-bold mt-4">{proposal?.title}</h1>
+                <h1 className="text-4xl font-bold mt-4">{newProposal?.title}</h1>
                 <div>
                   <Divider />
                   <p className="font-bold">author: {proposal?.creator}</p>
                   <p className="font-bold">created: {proposal?.created_at}</p>
                   <Divider />
                 </div>
-                <p>{proposal?.description}</p>
+                <p>{newProposal?.description}</p>
               </div>
               <div className="items-center px-4 py-3">
                 <button

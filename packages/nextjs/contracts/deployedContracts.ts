@@ -373,7 +373,7 @@ const deployedContracts = {
       },
     },
     Voting: {
-      address: "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+      address: "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
       abi: [
         {
           inputs: [],
@@ -556,19 +556,6 @@ const deployedContracts = {
         },
         {
           inputs: [],
-          name: "currentProposal",
-          outputs: [
-            {
-              internalType: "uint256",
-              name: "",
-              type: "uint256",
-            },
-          ],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [],
           name: "currentProtocol",
           outputs: [
             {
@@ -586,6 +573,11 @@ const deployedContracts = {
               internalType: "address",
               name: "_governance",
               type: "address",
+            },
+            {
+              internalType: "uint256",
+              name: "_id",
+              type: "uint256",
             },
             {
               internalType: "string",
