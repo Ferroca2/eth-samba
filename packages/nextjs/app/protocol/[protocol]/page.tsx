@@ -29,7 +29,7 @@ interface Protocol {
   image_url: string;
 }
 
-export async function getData(protocol: string) {
+async function getData(protocol: string) {
   let proto = [];
 
   try {
@@ -68,7 +68,7 @@ const ProtocolPage: React.FC<PageProps> = ({ params }) => {
     <div className="container mx-auto p-8">
       <h1 className="text-4xl font-bold">Proposals</h1>
       <button
-        onClick={() => router.push(`/protocol/${params.protocol}/form`)}
+        onClick={() => router.push(`/protocol/${params.protocol}/form/${propo?.id}`)}
         className="w-50 px-4 py-2 my-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-full active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
       >
         Create Proposal

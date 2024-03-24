@@ -11,7 +11,7 @@ interface Community {
   members: string;
 }
 
-export async function getData() {
+async function getData() {
   let communities = [];
 
   try {
