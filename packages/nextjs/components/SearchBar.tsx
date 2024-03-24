@@ -41,7 +41,7 @@ export const SearchBar = () => {
         placeholder="Write your comment here"
         onChange={e => setSearchInput(e.target.value)}
       />
-      <button className="btn btn-sm btn-primary" type="submit">
+      <button className="btn btn-sm btn-primary bg-blue-500 text-white" type="submit">
         Comment
       </button>
     </form>

@@ -1,69 +1,69 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import aaveLogo from "../../../public/aave-logo.jpeg";
+import axios from "axios";
 import { DescCard } from "~~/components/DescCard";
 import { ProposalCard } from "~~/components/ProposalCard";
+import { Spinner } from "~~/components/Spinner";
 
 type PageProps = {
   params: { protocol: string };
 };
-interface CardProps {
-  id: string;
+
+interface Proposal {
+  id: number;
+  protocol_id: number;
+  creator: string;
   title: string;
-  author: string;
-  createdDate: string;
-  status: "Active" | "Inactive";
+  description: string;
+  end_time: string;
+  on_chain: boolean;
+  created_at: string;
+  updated_at: string;
+}
+interface Protocol {
+  id: number;
+  title: string;
+  proposals: Proposal[];
+  image_url: string;
 }
 
-interface DescCardProps {
-  logo: string;
-  name: string;
-  members: string | number;
+export async function getData(protocol: string) {
+  let proto = [];
+
+  try {
+    // Perform a GET request using Axios
+    const response = await axios.get(`https://eth-samba.onrender.com/protocol/${protocol}`);
+    proto = response.data; // The data is available in the `data` property
+  } catch (error) {
+    // Handle the error accordingly
+    console.error("Failed to fetch proto", error);
+    // You might want to pass an error message as a prop and display it in the UI
+  }
+
+  // Pass data to the page via props
+  return proto as Protocol;
 }
 
 const ProtocolPage: React.FC<PageProps> = ({ params }) => {
   const router = useRouter();
-  const cards: CardProps[] = [
-    {
-      id: "1",
-      title: "[ARFC] GHO Stewards + Borrow Rate Update",
-      author: "@karpatkey_TokenLogic + @ACI + @ChaosLabs",
-      createdDate: "2024-03-13",
-      status: "Active",
-    },
-    {
-      id: "2",
-      title: "[ARFC] GHO Stewards + Borrow Rate Update",
-      author: "@karpatkey_TokenLogic + @ACI + @ChaosLabs",
-      createdDate: "2024-03-13",
-      status: "Active",
-    },
-    {
-      id: "3",
-      title: "[ARFC] GHO Stewards + Borrow Rate Update",
-      author: "@karpatkey_TokenLogic + @ACI + @ChaosLabs",
-      createdDate: "2024-03-13",
-      status: "Active",
-    },
-    {
-      id: "4",
-      title: "[ARFC] GHO Stewards + Borrow Rate Update",
-      author: "@karpatkey_TokenLogic + @ACI + @ChaosLabs",
-      createdDate: "2024-03-13",
-      status: "Active",
-    },
-    {
-      id: "5",
-      title: "[ARFC] GHO Stewards + Borrow Rate Update",
-      author: "@karpatkey_TokenLogic + @ACI + @ChaosLabs",
-      createdDate: "2024-03-13",
-      status: "Active",
-    },
-  ];
+  const [propo, setData] = useState<Protocol>();
+  const [isLoading, setLoading] = useState(true);
 
-  const community: DescCardProps = { logo: aaveLogo.src, name: "Aave", members: "140K" };
+  useEffect(() => {
+    getData(params.protocol).then((data: Protocol) => {
+      setData(data);
+      setLoading(false);
+    });
+  }, []);
+
+  if (isLoading)
+    return (
+      <div className="flex items-center flex-col flex-grow justify-center w-full text-center bg-base-300">
+        <Spinner />
+      </div>
+    );
   return (
     <div className="container mx-auto p-8">
       <h1 className="text-4xl font-bold">Proposals</h1>
@@ -75,18 +75,18 @@ const ProtocolPage: React.FC<PageProps> = ({ params }) => {
       </button>
       <div className="flex justify-between">
         <div>
-          {cards.map((card, index) => (
+          {propo?.proposals.map((card, index) => (
             <ProposalCard
+              id={card.id.toString()}
               key={index}
-              id={card.id}
               title={card.title}
-              author={card.author}
-              createdDate={card.createdDate}
-              status={card.status}
+              author={card.creator}
+              createdDate={card.created_at}
+              status={card.on_chain ? "Active" : "Inactive"}
             />
           ))}
         </div>
-        <DescCard logo={community.logo} name={community.name} members={community.members} />
+        <DescCard logo={propo!.image_url} name={propo!.title} members="100K" />
       </div>
     </div>
   );

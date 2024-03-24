@@ -36,10 +36,11 @@ const CreateProposal: React.FC = () => {
 
   return (
     <div className="bg-base-300 min-h-screen flex justify-center p-4">
-      <div className="max-w-lg w-full">
+      <div className="max-w-lg w-full bg-base-100 p-4 rounded-lg h-[28rem]">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="title" className="block text-sm font-medium">
+            <h1 className="font-bold text-lg">Create Proposal</h1>
+            <label htmlFor="title" className="block text-md font-medium">
               Title
             </label>
             <input
@@ -47,35 +48,35 @@ const CreateProposal: React.FC = () => {
               name="title"
               type="text"
               required
-              className="appearance-none block w-full bg-white text-white border border-gray-400 rounded-full py-2 px-3 leading-tight focus:outline-none focus:bg-gray-600 focus:border-blue-500"
+              className="appearance-none block w-full bg-base-100 text-white border border-gray-400 rounded-full py-2 px-3 leading-tight focus:outline-none focus:bg-base-300 focus:border-blue-500"
               value={form.title}
               onChange={handleChange}
             />
           </div>
 
           <div>
-            <label htmlFor="description" className="block text-sm font-medium">
+            <label htmlFor="description" className="block text-md font-medium">
               Description (optional)
             </label>
             <textarea
               id="description"
               name="description"
               rows={4}
-              className="block w-full bg-white text-white border border-gray-400 rounded-lg py-2 px-3 leading-tight focus:outline-none focus:bg-gray-600 focus:border-blue-500"
+              className="block w-full bg-base-100 text-white border border-gray-400 rounded-lg py-2 px-3 leading-tight focus:outline-none focus:bg-base-300 focus:border-blue-500"
               value={form.description}
               onChange={handleChange}
             />
           </div>
 
           <div>
-            <label htmlFor="discussionLink" className="block text-sm font-medium">
+            <label htmlFor="discussionLink" className="block text-md font-medium">
               Discussion (optional)
             </label>
             <input
               id="discussionLink"
               name="discussionLink"
               type="url"
-              className="appearance-none block w-full bg-white text-white border border-gray-400 rounded-full py-2 px-3 leading-tight focus:outline-none focus:bg-gray-600 focus:border-blue-500"
+              className="appearance-none block w-full bg-base-100 text-white border border-gray-400 rounded-full py-2 px-3 leading-tight focus:outline-none focus:bg-base-300 focus:border-blue-500"
               value={form.discussionLink}
               onChange={handleChange}
             />

@@ -1,7 +1,6 @@
 // components/Card.tsx
 import React from "react";
 import { useRouter } from "next/navigation";
-import { useAccount } from "wagmi";
 import { Address } from "~~/components/scaffold-eth";
 
 interface CardProps {
@@ -13,7 +12,6 @@ interface CardProps {
 }
 
 export const ProposalCard: React.FC<CardProps> = ({ id, title, author, createdDate, status }) => {
-  const { address: connectedAddress } = useAccount();
   const router = useRouter();
 
   return (
@@ -24,11 +22,11 @@ export const ProposalCard: React.FC<CardProps> = ({ id, title, author, createdDa
       <div className="flex-col items-center mb-4">
         <div className="flex justify-between items-center p-4">
           <div className="flex-shrink-0">
-            <Address address={connectedAddress} />
+            <Address address={author} />
           </div>
           <span
             className={`text-sm font-semibold py-1 px-3 rounded-full ${
-              status === "Active" ? "bg-green-200 text-green-700" : "bg-gray-200 text-gray-700"
+              status === "Active" ? "bg-green-200 text-green-700" : "bg-red-200 text-red-700"
             }`}
           >
             {status}
