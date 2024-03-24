@@ -20,6 +20,7 @@
     "express": "^4.19.1",
     "helmet": "^7.1.0",
     "nodemon": "^3.1.0",
+    "openai": "^4.29.2",
     "prisma": "^4.16.2",
     "swagger-autogen": "^2.23.7",
     "swagger-jsdoc": "^6.2.8",
