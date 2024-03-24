@@ -109,11 +109,12 @@ contract Voting {
 
     function makeProposal(
         address _governance,
+        uint256 _id,
         string memory _title,
         string memory _description
     ) external {
-        proposals[currentProposal] = Proposal(
-            currentProposal,
+        proposals[_id] = Proposal(
+            _id,
             _governance,
             _title,
             _description,
@@ -123,7 +124,7 @@ contract Voting {
         );
 
         emit ProposalMade(
-            currentProposal,
+            _id,
             _governance,
             _title,
             _description,

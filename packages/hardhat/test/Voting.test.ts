@@ -53,13 +53,14 @@ describe("Governance System", function () {
     it("Should allow a proposal to be made", async function () {
       const tx = await voting.makeProposal(
         governanceToken.getAddress(),
+        1,
         "Test Proposal",
         "Description of the test proposal"
       );
       await tx.wait();
 
 
-      const proposal = await voting.proposals(0);
+      const proposal = await voting.proposals(1);
       expect(proposal.title).to.equal("Test Proposal");
     });
   });
@@ -67,25 +68,25 @@ describe("Governance System", function () {
   describe("Voting on a Proposal", function () {
     it("Should allow voting and correctly tally votes", async function () {
       // Assume OPTION enums are 0 = AGREE, 1 = ABSTAIN, 2 = DISAGREE
-      await voting.voteForProposal(0, 0); // Owner votes AGREE
+      await voting.voteForProposal(1, 0); // Owner votes AGREE
 
       // Transfer some tokens to another account for varied voting power
       await governanceToken.transfer(addr1.address, ethers.parseUnits("100", 18));
 
       // Switch to addr1 to vote
-      await voting.connect(addr1).voteForProposal(0, 2); // addr1 votes DISAGREE
+      await voting.connect(addr1).voteForProposal(1, 2); // addr1 votes DISAGREE
 
       await advanceTime(60 * 60); // Advance time to end voting period
 
       // Settle Votes (to be done by the owner for simplicity)
-      await voting.settleVotes(0);
+      await voting.settleVotes(1);
 
-      const proposal = await voting.proposals(0);
+      const proposal = await voting.proposals(1);
       expect(proposal.situation).to.equal(1); // Assuming 0 = VOTING, 1 = ACCEPTED, 2 = UNACCPETED
     });
 
     it("Should not allow a user to vote twice on the same proposal", async function () {
-      const proposalId = 0; // Assuming this proposal ID exists from previous tests
+      const proposalId = 1; // Assuming this proposal ID exists from previous tests
       const voteOptionAgree = 0; // Assuming 0 corresponds to the AGREE option
 
       await expect(voting.voteForProposal(proposalId, voteOptionAgree)).to.be.revertedWith("Already voted");
@@ -128,7 +129,7 @@ describe("Governance System", function () {
     let owner: SignerWithAddress;
     let voter1: SignerWithAddress;
     let voter2: SignerWithAddress;
-    let proposalId: number;
+    let proposalId: number = 2;
     
     before(async () => {
       [owner, voter1, voter2] = await ethers.getSigners();
@@ -157,44 +158,42 @@ describe("Governance System", function () {
         50,
       );
   
-      // Create a Proposal
-      const tx = await voting.makeProposal(
-        governanceToken.getAddress(),
-        "Test Proposal for Accept",
-        "This is a test proposal to test accept scenario"
-      );
-      proposalId = parseInt(tx.data[0]); // Adjust based on how your contract assigns proposal IDs
     });
   
     describe("Accept Scenario", function () {
       it("Should pass the proposal when the majority agrees", async function () {
+        const tx = await voting.makeProposal(
+          governanceToken.getAddress(),
+          2,
+          "Test Proposal for Accept",
+          "This is a test proposal to test accept scenario"
+        );
         // Have voters vote
-        await voting.connect(voter1).voteForProposal(proposalId, 0); // Assuming 0 is AGREE
-        await voting.connect(voter2).voteForProposal(proposalId, 0); // Assuming 0 is AGREE
+        await voting.connect(voter1).voteForProposal(2, 0); // Assuming 0 is AGREE
+        await voting.connect(voter2).voteForProposal(2, 0); // Assuming 0 is AGREE
 
         await advanceTime(60 * 60); // Advance time to end voting period
 
-        await voting.settleVotes(proposalId);
+        await voting.settleVotes(2);
         console.log()
   
-        const proposal = await voting.proposals(proposalId);
+        const proposal = await voting.proposals(2);
         expect(proposal.situation).to.equal(1); // Assuming 1 corresponds to ACCEPTED
       });
     });
   
     describe("Reject Scenario", function () {
       it("Should fail the proposal when the majority disagrees", async function () {
-        //create proposal
-
         const tx = await voting.makeProposal(
             governanceToken.getAddress(),
+            3,
             "Test Proposal for Reject",
             "This is a test proposal to test reject scenario"
         );
 
         
 
-        const proposalId = await voting.currentProposal() - BigInt(1);
+        const proposalId = 3;
   
         // Have voters vote
         await voting.connect(voter1).voteForProposal(proposalId, 2); // Assuming 2 is DISAGREE
