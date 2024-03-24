@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 
 interface ProtocolCardProps {
@@ -9,11 +10,15 @@ interface ProtocolCardProps {
 }
 
 export const ProtocolCard: React.FC<ProtocolCardProps> = ({ logo, name, members }) => {
+  const router = useRouter();
   const { resolvedTheme } = useTheme();
   const isDarkMode = resolvedTheme === "dark";
 
   return (
-    <div className="bg-base-100 rounded-lg px-4 py-8 w-64">
+    <div
+      onClick={() => router.push(`/protocol/${name}`)}
+      className="bg-base-100 rounded-lg px-4 py-8 w-64 transition-shadow duration-300 ease-in-out hover:shadow-lg cursor-pointer"
+    >
       <div className="flex items-center flex-col justify-center">
         {/* Use Next.js Image for optimized image loading */}
         <div className="h-16 w-16 relative rounded-full">

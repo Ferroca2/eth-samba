@@ -14,6 +14,20 @@ const Home: NextPage = () => {
   const communities: Community[] = [
     { logo: aaveLogo.src, name: "Aave", members: "140K" },
     { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
+    { logo: aaveLogo.src, name: "ENS", members: "129K" },
     // ... add more community objects here
   ];
 
